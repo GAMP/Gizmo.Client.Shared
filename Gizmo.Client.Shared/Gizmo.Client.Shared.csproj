@@ -16,7 +16,7 @@
 		<Description>Gizmo Client shared code library.</Description>
 		<Copyright>NETProjects</Copyright>
 		<RepositoryType>git</RepositoryType>
-		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<PackageIcon>package_icon.png</PackageIcon>
