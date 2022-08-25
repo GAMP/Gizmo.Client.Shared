@@ -1,4 +1,4 @@
-﻿using Gizmo.Shared.Client.UI.ViewModels;
+﻿using Gizmo.Web.Api.Models;
 using System.Collections.Generic;
 
 namespace Gizmo.Client
@@ -8,12 +8,12 @@ namespace Gizmo.Client
     /// </summary>
     public interface IGizmoClient
     {
-        public IEnumerable<ProductGroupViewModel> GetProductGroups();
+        public IEnumerable<ProductGroup> GetProductGroups(ProductGroupsFilter filter);
 
-        public IEnumerable<ProductViewModel> GetProducts();
+        public IEnumerable<Product> GetProducts(ProductsFilter filter);
 
-        public IEnumerable<ApplicationViewModel> GetApplications();
+        public IEnumerable<Application> GetApplications(ApplicationsFilter filter);
 
-        public IEnumerable<ExecutableViewModel> GetExecutables();
+        public IEnumerable<ApplicationExecutable> GetApplicationExecutables(ApplicationExecutablesFilter filter);
     }
 }
