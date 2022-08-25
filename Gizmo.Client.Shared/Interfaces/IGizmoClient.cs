@@ -1,5 +1,4 @@
 ﻿using Gizmo.Web.Api.Models;
-using System.Collections.Generic;
 
 namespace Gizmo.Client
 {
@@ -8,12 +7,12 @@ namespace Gizmo.Client
     /// </summary>
     public interface IGizmoClient
     {
-        public IEnumerable<ProductGroup> GetProductGroups(ProductGroupsFilter filter);
+        public Task<PagedList<ProductGroup>> GetProductGroupsAsync(ProductGroupsFilter filter);
 
-        public IEnumerable<Product> GetProducts(ProductsFilter filter);
+        public Task<PagedList<Product>> GetProductsAsync(ProductsFilter filter);
 
-        public IEnumerable<Application> GetApplications(ApplicationsFilter filter);
+        public Task<PagedList<Application>> GetApplicationsAsync(ApplicationsFilter filter);
 
-        public IEnumerable<ApplicationExecutable> GetApplicationExecutables(ApplicationExecutablesFilter filter);
+        public Task<PagedList<ApplicationExecutable>> GetApplicationExecutablesAsync(ApplicationExecutablesFilter filter);
     }
 }
