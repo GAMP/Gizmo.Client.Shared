@@ -16,5 +16,7 @@ namespace Gizmo.Client
         public Task<PagedList<Application>> GetApplicationsAsync(ApplicationsFilter filter);
 
         public Task<PagedList<ApplicationExecutable>> GetApplicationExecutablesAsync(ApplicationExecutablesFilter filter);
+
+        public Task<PagedList<PaymentMethod>> GetPaymentMethodsAsync(PaymentMethodsFilter filter);
     }
 }
