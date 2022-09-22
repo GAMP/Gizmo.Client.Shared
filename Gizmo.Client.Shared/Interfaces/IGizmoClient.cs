@@ -10,6 +10,8 @@ namespace Gizmo.Client
         public Task<PagedList<ProductGroup>> GetProductGroupsAsync(ProductGroupsFilter filter);
 
         public Task<PagedList<Product>> GetProductsAsync(ProductsFilter filter);
+        
+        public Task<PagedList<BundledProduct>> GetBundledProducts(int id);
 
         public Task<PagedList<ApplicationGroup>> GetApplicationGroupsAsync(ApplicationGroupsFilter filter);
 
