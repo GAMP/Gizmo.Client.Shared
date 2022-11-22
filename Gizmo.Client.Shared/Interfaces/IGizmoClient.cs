@@ -7,6 +7,14 @@ namespace Gizmo.Client
     /// </summary>
     public interface IGizmoClient
     {
+        public Task<PagedList<UserAgreement>> GetUserAgreementsAsync(UserAgreementsFilter filter);
+
+        public Task<List<UserAgreementState>> GetUserAgreementStatesAsync(int userId);
+
+        public Task<UpdateResult> AcceptUserAgreementForUserAsync(int userAgreementId, int userId);
+
+        public Task<UpdateResult> RejectUserAgreementForUserAsync(int userAgreementId, int userId);
+
         public Task<PagedList<ProductGroup>> GetProductGroupsAsync(ProductGroupsFilter filter);
 
         public Task<PagedList<Product>> GetProductsAsync(ProductsFilter filter);
