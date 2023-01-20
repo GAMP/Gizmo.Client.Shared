@@ -7,34 +7,34 @@ namespace Gizmo.Client
     /// </summary>
     public interface IGizmoClient
     {
-        public Task<PagedList<UserAgreement>> GetUserAgreementsAsync(UserAgreementsFilter filter);
+        public Task<PagedList<UserAgreementModel>> GetUserAgreementsAsync(UserAgreementsFilter filter);
 
-        public Task<List<UserAgreementState>> GetUserAgreementStatesAsync(int userId);
+        public Task<List<UserAgreementModelState>> GetUserAgreementStatesAsync(int userId);
 
         public Task<UpdateResult> AcceptUserAgreementForUserAsync(int userAgreementId, int userId);
 
         public Task<UpdateResult> RejectUserAgreementForUserAsync(int userAgreementId, int userId);
 
-        public Task<PagedList<ProductGroup>> GetProductGroupsAsync(ProductGroupsFilter filter);
+        public Task<PagedList<ProductGroupModel>> GetProductGroupsAsync(ProductGroupsFilter filter);
 
-        public Task<PagedList<Product>> GetProductsAsync(ProductsFilter filter);
+        public Task<PagedList<ProductModel>> GetProductsAsync(ProductsFilter filter);
 
-        public Task<Product> GetProductByIdAsync(int id, GetOptions? options = null);
+        public Task<ProductModel> GetProductByIdAsync(int id, ModelFilterOptions? options = null);
 
-        public Task<PagedList<BundledProduct>> GetBundledProductsAsync(int id);
+        public Task<PagedList<ProductBundledModel>> GetBundledProductsAsync(int id);
 
-        public Task<PagedList<ApplicationGroup>> GetApplicationGroupsAsync(ApplicationGroupsFilter filter);
+        public Task<PagedList<ApplicationGroupModel>> GetApplicationGroupsAsync(ApplicationGroupsFilter filter);
 
-        public Task<PagedList<ApplicationEnterprise>> GetAppEnterprisesAsync(ApplicationEnterprisesFilter filter);
-        
-        public Task<PagedList<Application>> GetApplicationsAsync(ApplicationsFilter filter);
+        public Task<PagedList<ApplicationEnterpriseModel>> GetAppEnterprisesAsync(ApplicationEnterprisesFilter filter);
 
-        public Task<PagedList<ApplicationExecutable>> GetApplicationExecutablesAsync(ApplicationExecutablesFilter filter);
+        public Task<PagedList<ApplicationModel>> GetApplicationsAsync(ApplicationsFilter filter);
 
-        public Task<ApplicationImage> GetApplicationImageAsync(int id);
+        public Task<PagedList<ApplicationExecutableModel>> GetApplicationExecutablesAsync(ApplicationExecutablesFilter filter);
 
-        public Task<ApplicationExecutableImage> GetApplicationExecutableImageAsync(int id);
+        public Task<ApplicationModelImage> GetApplicationImageAsync(int id);
 
-        public Task<PagedList<PaymentMethod>> GetPaymentMethodsAsync(PaymentMethodsFilter filter);
+        public Task<ApplicationExecutableModelImage> GetApplicationExecutableImageAsync(int id);
+
+        public Task<PagedList<PaymentMethodModel>> GetPaymentMethodsAsync(PaymentMethodsFilter filter);
     }
 }
