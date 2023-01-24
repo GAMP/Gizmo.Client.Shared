@@ -26,7 +26,7 @@ namespace Gizmo.Client
         public Task<PagedList<ApplicationGroup>> GetApplicationGroupsAsync(ApplicationGroupsFilter filter);
 
         public Task<PagedList<ApplicationEnterprise>> GetAppEnterprisesAsync(ApplicationEnterprisesFilter filter);
-        
+
         public Task<PagedList<Application>> GetApplicationsAsync(ApplicationsFilter filter);
 
         public Task<PagedList<ApplicationExecutable>> GetApplicationExecutablesAsync(ApplicationExecutablesFilter filter);
@@ -36,5 +36,7 @@ namespace Gizmo.Client
         public Task<ApplicationExecutableImage> GetApplicationExecutableImageAsync(int id);
 
         public Task<PagedList<PaymentMethod>> GetPaymentMethodsAsync(PaymentMethodsFilter filter);
+
+        Task UserPasswordChange(int userId, string oldPassword, string newPassword);
     }
 }
