@@ -36,5 +36,7 @@ namespace Gizmo.Client
         public Task<ApplicationExecutableModelImage> GetApplicationExecutableImageAsync(int id);
 
         public Task<PagedList<PaymentMethodModel>> GetPaymentMethodsAsync(PaymentMethodsFilter filter);
+
+        public Task UserPasswordChange(int userId, string oldPassword, string newPassword);
     }
 }
