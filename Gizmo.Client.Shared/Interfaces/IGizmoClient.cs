@@ -7,11 +7,17 @@ namespace Gizmo.Client
     /// </summary>
     public interface IGizmoClient
     {
-        #region Registration
+        public Task<UserModel> GetUserProfileAsync();
 
-        public Task<bool> AccountCreationByEmailStartAsync(string email);
+        public Task<UpdateResult> UpdateUserProfileAsync(UserModelUpdate user);
 
-        public Task<bool> AccountCreationByMobilePhoneStartAsync(string mobilePhone);
+        public Task<bool> GetUserBalanceAsync();
+
+        #region Top Up
+
+        public Task<PaymentOnlineConfigurationModel> GetOnlinePaymentsConfigurationAsync();
+
+        public Task<PaymentIntentCreateResultModel> CreatePaymentIntentAsync(PaymentIntentCreateParametersDepositModel paymentIntentCreateParametersDeposit);
 
         #endregion
 
@@ -50,6 +56,14 @@ namespace Gizmo.Client
         public Task<bool> UsernameExistAsync(string username);
 
         public Task<UserModelRequiredInfo> GetDefaultUserGroupRequiredInfoAsync();
+
+        public Task<AccountCreationResultModelByEmail> AccountCreationByEmailStartAsync(string email);
+
+        public Task<AccountCreationResultModelByMobilePhone> AccountCreationByMobilePhoneStartAsync(string mobilePhone);
+
+        public Task<AccountCreationCompleteResultModel> AccountCreationCompleteAsync(UserModelUpdate user, string password);
+
+        public Task<AccountCreationCompleteResultModelByToken> AccountCreationByTokenCompleteAsync(string token, UserModelUpdate user, string password);
 
         #endregion
 

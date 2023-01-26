@@ -15,9 +15,9 @@
 
         public const string HomeRoute = "/home";
         public const string ApplicationsRoute = "/apps";
-        public const string ApplicationDetailsRoute = "/appdetails/{ApplicationId:int}";
+        public const string ApplicationDetailsRoute = "/appdetails";
         public const string ShopRoute = "/shop";
-        public const string ProductDetailsRoute = "/productdetails/{ProductId:int}";
+        public const string ProductDetailsRoute = "/productdetails";
 
         public const string UserProfileRoute = "/profile";
         public const string UserDepositsRoute = "/profile/deposits";
