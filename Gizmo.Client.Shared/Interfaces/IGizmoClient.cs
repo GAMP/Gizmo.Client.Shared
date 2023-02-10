@@ -42,7 +42,7 @@ namespace Gizmo.Client
         /// Returns all agreement states for current user.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<List<UserAgreementModelState>> UserAgreementsGetStatesAsync(CancellationToken cancellationToken = default);
+        public Task<List<UserAgreementModelState>> UserAgreementsStatesGetAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Accepts user agreement specified by <paramref name="userAgreementId"/> parameter.
@@ -57,6 +57,14 @@ namespace Gizmo.Client
         /// <param name="userAgreementId">User agreement id.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         public Task<UpdateResult> UserAgreementRejectAsync(int userAgreementId, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Set user agreement state.
+        /// </summary>
+        /// <param name="userAgreementId">User agreement id.</param>
+        /// <param name="state">State.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        public Task<UpdateResult> UserAgreementStateSetAsync(int userAgreementId, Gizmo.UserAgreementAcceptState state, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Checks if specified user email exist.
@@ -75,12 +83,15 @@ namespace Gizmo.Client
         public Task<bool> UserMobileExistAsync(string mobilePhone, CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Checks if specified user name exist.
+        /// Checks if specified user exist.
         /// </summary>
-        /// <param name="username">User user name.</param>
+        /// <param name="userNameEmailOrMobile">User user name, email or mobile phone.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
+        /// <remarks>
+        /// <b>The function will return true if user with username, email or mobile phone specified by <paramref name="userNameEmailOrMobile"/> exists.</b>
+        /// </remarks>
         /// <returns>True or false.</returns>
-        public Task<bool> UsernameExistAsync(string username, CancellationToken cancellationToken = default);
+        public Task<bool> UserExistAsync(string userNameEmailOrMobile, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Checks if specified token is valid.
@@ -189,27 +200,35 @@ namespace Gizmo.Client
         /// <param name="cancellationToken">Cancellation token.</param>
         public Task<UpdateResult> UserProfileUpdateAsync(UserProfileModelUpdate user, CancellationToken cancellationToken = default);
 
-
         /// <summary>
         /// Updates current user password.
         /// </summary>
         /// <param name="oldPassword">Old user password.</param>
         /// <param name="newPassword">New user password.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task UserPasswordUpdateAsync(string? oldPassword, string newPassword, CancellationToken cancellationToken = default);
+        public Task<UpdateResult> UserPasswordUpdateAsync(string oldPassword, string newPassword, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Creates deposit payment intent.
         /// </summary>
-        /// <param name="paymentIntentCreateParametersDeposit">Deposit payment intent parameters.</param>
+        /// <param name="parameters">Deposit intent parameters.</param>
+        /// <param name="cancellationToken">>Cancellation token.</param>
         /// <returns>Creation result.</returns>
-        public Task<PaymentIntentCreateResultModel> DepositPaymentIntentCreateAsync(PaymentIntentCreateParametersDepositModel paymentIntentCreateParametersDeposit);
+        public Task<PaymentIntentCreateResultModel> PaymentIntentCreateAsync(PaymentIntentCreateParametersDepositModel parameters, CancellationToken cancellationToken = default);
+
+
+        /// <summary>
+        /// Gets online deposit configuration.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Online deposit configuration.</returns>
+        public Task<PaymentOnlineConfigurationModel> OnlinePaymentsConfigurationGetAsync(CancellationToken cancellationToken = default);
 
         //#region Top Up
 
-        public Task<PaymentOnlineConfigurationModel> GetOnlinePaymentsConfigurationAsync();
+        //public Task<PaymentOnlineConfigurationModel> GetOnlinePaymentsConfigurationAsync();
 
-
+        //public Task<PaymentIntentCreateResultModel> CreatePaymentIntentAsync(PaymentIntentCreateParametersDepositModel paymentIntentCreateParametersDeposit);
 
         //#endregion
 
