@@ -196,13 +196,20 @@ namespace Gizmo.Client
         /// <param name="oldPassword">Old user password.</param>
         /// <param name="newPassword">New user password.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task UserPasswordUpdateAsync(string oldPassword, string newPassword, CancellationToken cancellationToken = default);
+        public Task UserPasswordUpdateAsync(string? oldPassword, string newPassword, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Creates deposit payment intent.
+        /// </summary>
+        /// <param name="paymentIntentCreateParametersDeposit">Deposit payment intent parameters.</param>
+        /// <returns>Creation result.</returns>
+        public Task<PaymentIntentCreateResultModel> DepositPaymentIntentCreateAsync(PaymentIntentCreateParametersDepositModel paymentIntentCreateParametersDeposit);
 
         #region Top Up
 
         public Task<PaymentOnlineConfigurationModel> GetOnlinePaymentsConfigurationAsync();
 
-        public Task<PaymentIntentCreateResultModel> CreatePaymentIntentAsync(PaymentIntentCreateParametersDepositModel paymentIntentCreateParametersDeposit);
+
 
         #endregion
 
