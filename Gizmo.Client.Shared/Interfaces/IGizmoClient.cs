@@ -15,14 +15,14 @@ namespace Gizmo.Client
         /// <param name="username">Username.</param>
         /// <param name="password">Optional password.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<LoginResult> UserLoginAsync(string username,string? password, CancellationToken cancellationToken= default);
+        public Task<LoginResult> UserLoginAsync(string username, string? password, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Initiates user logout.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns></returns>
-        public Task UserLogoutAsync(CancellationToken cancellationToken= default);
+        public Task UserLogoutAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns all user agreements based on supplied <paramref name="filter"/>.
@@ -30,13 +30,13 @@ namespace Gizmo.Client
         /// <param name="filter">Filter.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns></returns>
-        public Task<PagedList<UserAgreementModel>> UserAgreementsGetAsync(UserAgreementsFilter filter , CancellationToken cancellationToken= default);
+        public Task<PagedList<UserAgreementModel>> UserAgreementsGetAsync(UserAgreementsFilter filter, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Gets pending user agreements.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<PagedList<UserAgreementModel>> UserAgreementsPendingGetAsync(UserAgreementsFilter filter , CancellationToken cancellationToken = default);
+        public Task<PagedList<UserAgreementModel>> UserAgreementsPendingGetAsync(UserAgreementsFilter filter, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns all agreement states for current user.
@@ -49,7 +49,7 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="userAgreementId">User agreement id.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<UpdateResult> UserAgreementAcceptAsync(int userAgreementId, CancellationToken cancellationToken =default);
+        public Task<UpdateResult> UserAgreementAcceptAsync(int userAgreementId, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Rejects user agreement specified by <paramref name="userAgreementId"/> parameter.
@@ -122,7 +122,7 @@ namespace Gizmo.Client
         /// <param name="password">User password.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Completion result.</returns>
-        public Task<AccountCreationCompleteResultModel> UserCreateCompleteAsync(UserModelUpdate user, string password, CancellationToken cancellationToken = default);
+        public Task<AccountCreationCompleteResultModel> UserCreateCompleteAsync(UserProfileModelCreate user, string password, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Completes user creation.
@@ -132,7 +132,7 @@ namespace Gizmo.Client
         /// <param name="password">User password.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Completion result.</returns>
-        public Task<AccountCreationCompleteResultModelByToken> UserCreateByTokenCompleteAsync(string token, UserModelUpdate user, string password, CancellationToken cancellationToken = default);
+        public Task<AccountCreationCompleteResultModelByToken> UserCreateByTokenCompleteAsync(string token, UserProfileModelCreate user, string password, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Gets user password recovery methods for specified user.
@@ -180,50 +180,29 @@ namespace Gizmo.Client
         /// Gets current user profile.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<UserModel> UserProfileGetAsync(CancellationToken cancellationToken = default);
+        public Task<UserProfileModel> UserProfileGetAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Updates current user profile.
         /// </summary>
         /// <param name="user">User profile.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<UpdateResult> UserProfileUpdateAsync(UserModelUpdate user, CancellationToken cancellationToken = default);
+        public Task<UpdateResult> UserProfileUpdateAsync(UserProfileModelUpdate user, CancellationToken cancellationToken = default);
 
 
         /// <summary>
-        /// Changes current user password.
+        /// Updates current user password.
         /// </summary>
         /// <param name="oldPassword">Old user password.</param>
         /// <param name="newPassword">New user password.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task UserPasswordChangeAsync(string oldPassword,string newPassword,CancellationToken cancellationToken = default);
+        public Task UserPasswordUpdateAsync(string oldPassword, string newPassword, CancellationToken cancellationToken = default);
 
         #region Top Up
 
         public Task<PaymentOnlineConfigurationModel> GetOnlinePaymentsConfigurationAsync();
 
         public Task<PaymentIntentCreateResultModel> CreatePaymentIntentAsync(PaymentIntentCreateParametersDepositModel paymentIntentCreateParametersDeposit);
-
-        #endregion
-
-        #region Password Recovery
-
-
-
-        #endregion
-
-        #region User Agreements
-
-
-
-
-        #endregion
-
-        #region Registration
-
-
-
-
 
         #endregion
 
@@ -256,8 +235,6 @@ namespace Gizmo.Client
         #endregion
 
         public Task<PagedList<PaymentMethodModel>> GetPaymentMethodsAsync(PaymentMethodsFilter filter);
-
-        
 
         public Task<CreateResult> CreateUserOrderAsync(int userId, OrderCalculateModelOptions calculateOrderOptions);
     }
