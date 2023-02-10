@@ -205,44 +205,44 @@ namespace Gizmo.Client
         /// <returns>Creation result.</returns>
         public Task<PaymentIntentCreateResultModel> DepositPaymentIntentCreateAsync(PaymentIntentCreateParametersDepositModel paymentIntentCreateParametersDeposit);
 
-        #region Top Up
+        //#region Top Up
 
         public Task<PaymentOnlineConfigurationModel> GetOnlinePaymentsConfigurationAsync();
 
 
 
-        #endregion
+        //#endregion
 
-        #region Products
+        //#region Products
 
-        public Task<PagedList<ProductGroupModel>> GetProductGroupsAsync(ProductGroupsFilter filter);
+        //public Task<PagedList<ProductGroupModel>> GetProductGroupsAsync(ProductGroupsFilter filter);
 
-        public Task<PagedList<ProductModel>> GetProductsAsync(ProductsFilter filter);
+        //public Task<PagedList<ProductModel>> GetProductsAsync(ProductsFilter filter);
 
-        public Task<ProductModel> GetProductByIdAsync(int id, ModelFilterOptions? options = null);
+        //public Task<ProductModel> GetProductByIdAsync(int id, ModelFilterOptions? options = null);
 
-        public Task<PagedList<ProductBundledModel>> GetBundledProductsAsync(int id);
+        //public Task<PagedList<ProductBundledModel>> GetBundledProductsAsync(int id);
 
-        #endregion
+        //#endregion
 
-        #region Applications
+        //#region Applications
 
-        public Task<PagedList<ApplicationGroupModel>> GetApplicationGroupsAsync(ApplicationGroupsFilter filter);
+        //public Task<PagedList<ApplicationGroupModel>> GetApplicationGroupsAsync(ApplicationGroupsFilter filter);
 
-        public Task<PagedList<ApplicationEnterpriseModel>> GetAppEnterprisesAsync(ApplicationEnterprisesFilter filter);
+        //public Task<PagedList<ApplicationEnterpriseModel>> GetAppEnterprisesAsync(ApplicationEnterprisesFilter filter);
 
-        public Task<PagedList<ApplicationModel>> GetApplicationsAsync(ApplicationsFilter filter);
+        //public Task<PagedList<ApplicationModel>> GetApplicationsAsync(ApplicationsFilter filter);
 
-        public Task<PagedList<ApplicationExecutableModel>> GetApplicationExecutablesAsync(ApplicationExecutablesFilter filter);
+        //public Task<PagedList<ApplicationExecutableModel>> GetApplicationExecutablesAsync(ApplicationExecutablesFilter filter);
 
-        public Task<ApplicationModelImage> GetApplicationImageAsync(int id);
+        //public Task<ApplicationModelImage> GetApplicationImageAsync(int id);
 
-        public Task<ApplicationExecutableModelImage> GetApplicationExecutableImageAsync(int id);
+        //public Task<ApplicationExecutableModelImage> GetApplicationExecutableImageAsync(int id);
 
-        #endregion
+        //#endregion
 
-        public Task<PagedList<PaymentMethodModel>> GetPaymentMethodsAsync(PaymentMethodsFilter filter);
+        //public Task<PagedList<PaymentMethodModel>> GetPaymentMethodsAsync(PaymentMethodsFilter filter);
 
-        public Task<CreateResult> CreateUserOrderAsync(int userId, OrderCalculateModelOptions calculateOrderOptions);
+        //public Task<CreateResult> CreateUserOrderAsync(int userId, OrderCalculateModelOptions calculateOrderOptions);
     }
 }
