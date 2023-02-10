@@ -169,11 +169,34 @@ namespace Gizmo.Client
         public Task<PasswordRecoveryCompleteResultCode> UserPasswordRecoveryCompleteAsync(string token, string confirmationCode, string newPassword, CancellationToken cancellationToken = default);
 
 
-        public Task<UserModel> GetUserProfileAsync();
+        /// <summary>
+        /// Gets user balance.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns></returns>
+        public Task<UserBalanceModel> UserBalanceGetAsync(CancellationToken cancellationToken = default);
 
-        public Task<UpdateResult> UpdateUserProfileAsync(UserModelUpdate user);
+        /// <summary>
+        /// Gets current user profile.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        public Task<UserModel> UserProfileGetAsync(CancellationToken cancellationToken = default);
 
-        public Task<bool> GetUserBalanceAsync();
+        /// <summary>
+        /// Updates current user profile.
+        /// </summary>
+        /// <param name="user">User profile.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        public Task<UpdateResult> UserProfileUpdateAsync(UserModelUpdate user, CancellationToken cancellationToken = default);
+
+
+        /// <summary>
+        /// Changes current user password.
+        /// </summary>
+        /// <param name="oldPassword">Old user password.</param>
+        /// <param name="newPassword">New user password.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        public Task UserPasswordChangeAsync(string oldPassword,string newPassword,CancellationToken cancellationToken = default);
 
         #region Top Up
 
