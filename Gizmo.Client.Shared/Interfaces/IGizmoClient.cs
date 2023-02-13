@@ -224,12 +224,26 @@ namespace Gizmo.Client
         public Task<PaymentOnlineConfigurationModel> OnlinePaymentsConfigurationGetAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
+        /// Gets user usage session.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns></returns>
+        public Task<UserUsageSessionModel> UserUsageSessionGetAsync(CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Gets client reservation.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns></returns>
+        public Task<ClientReservationModel> ClientReservationGetAsync(CancellationToken cancellationToken = default);
+
+        /// <summary>
         /// Returns all news based on supplied <paramref name="filters"/>.
         /// </summary>
         /// <param name="filters">Filters.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns></returns>
-        public Task<PagedList<NewModel>> NewsGetAsync(NewsFilter filters, CancellationToken cancellationToken = default);
+        public Task<PagedList<NewsModel>> NewsGetAsync(NewsFilter filters, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns all feeds based on supplied <paramref name="filters"/>.
