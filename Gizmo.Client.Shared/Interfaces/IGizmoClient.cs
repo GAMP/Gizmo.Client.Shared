@@ -158,7 +158,7 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="username">User name.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns>Result.</returns>
+        /// <returns>Recovery procedure result.</returns>
         public Task<PasswordRecoveryStartResultModelByMobile> UserPasswordRecoveryByMobileStartAsync(string username, CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="email">User email address.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns></returns>
+        /// <returns>Recovery procedure result.</returns>
         public Task<PasswordRecoveryStartResultModelByEmail> UserPasswordRecoveryByEmailStartAsync(string email, CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace Gizmo.Client
         /// <param name="confirmationCode">Confirmation code.</param>
         /// <param name="newPassword">New user password.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns>Completion result.</returns>
+        /// <returns>Recovery procedure completion result.</returns>
         public Task<PasswordRecoveryCompleteResultCode> UserPasswordRecoveryCompleteAsync(string token, string confirmationCode, string newPassword, CancellationToken cancellationToken = default);
 
 
@@ -184,13 +184,14 @@ namespace Gizmo.Client
         /// Gets user balance.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns></returns>
+        /// <returns>Current user balance.</returns>
         public Task<UserBalanceModel> UserBalanceGetAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Gets current user profile.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Current user profile.</returns>
         public Task<UserProfileModel> UserProfileGetAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -227,14 +228,12 @@ namespace Gizmo.Client
         /// Gets user usage session.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns></returns>
         public Task<UserUsageSessionModel> UserUsageSessionGetAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Gets client reservation.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns></returns>
         public Task<ClientReservationModel> ClientReservationGetAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -242,7 +241,6 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="filters">Filters.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns></returns>
         public Task<PagedList<NewsModel>> NewsGetAsync(NewsFilter filters, CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -250,47 +248,49 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="filters">Filters.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns></returns>
         public Task<PagedList<FeedModel>> FeedsGetAsync(FeedsFilter filters, CancellationToken cancellationToken = default);
 
-        //#region Top Up
+        #region UNDER REVIEW 
 
-        //public Task<PaymentOnlineConfigurationModel> GetOnlinePaymentsConfigurationAsync();
+        public Task<PagedList<PaymentMethodModel>> PaymentMethodsGetAsync(PaymentMethodsFilter filter, CancellationToken cancellationToken = default);
 
-        //public Task<PaymentIntentCreateResultModel> CreatePaymentIntentAsync(PaymentIntentCreateParametersDepositModel paymentIntentCreateParametersDeposit);
+        public Task<CreateResult> UserOrderCreateAsync(int userId, OrderCalculateModelOptions calculateOrderOptions, CancellationToken cancellationToken = default);
 
-        //#endregion
+        #region Products
 
-        //#region Products
+        /// <summary>
+        /// Returns all product groups based on supplied <paramref name="filter"/>.
+        /// </summary>
+        /// <param name="filter">Filters.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Product groups.</returns>
+        public Task<PagedList<ProductGroupModel>> ProductGroupsGetAsync(ProductGroupsFilter filter, CancellationToken cancellationToken = default);
 
-        //public Task<PagedList<ProductGroupModel>> GetProductGroupsAsync(ProductGroupsFilter filter);
+        public Task<PagedList<ProductModel>> ProductsGetAsync(ProductsFilter filter, CancellationToken cancellationToken = default);
 
-        //public Task<PagedList<ProductModel>> GetProductsAsync(ProductsFilter filter);
+        public Task<ProductModel> ProductGetAsync(int id, ModelFilterOptions? options = null);
 
-        //public Task<ProductModel> GetProductByIdAsync(int id, ModelFilterOptions? options = null);
+        public Task<PagedList<ProductBundledModel>> ProductsBundleGetAsync(int id, CancellationToken cancellationToken = default);
 
-        //public Task<PagedList<ProductBundledModel>> GetBundledProductsAsync(int id);
+        #endregion
 
-        //#endregion
+        #region Applications
 
-        //#region Applications
+        public Task<PagedList<ApplicationGroupModel>> ApplicationGroupsGetAsync(ApplicationGroupsFilter filter, CancellationToken cancellationToken =default);
 
-        //public Task<PagedList<ApplicationGroupModel>> GetApplicationGroupsAsync(ApplicationGroupsFilter filter);
+        public Task<PagedList<ApplicationEnterpriseModel>> EnterprisesGetAsync(ApplicationEnterprisesFilter filter, CancellationToken cancellationToken =default);
 
-        //public Task<PagedList<ApplicationEnterpriseModel>> GetAppEnterprisesAsync(ApplicationEnterprisesFilter filter);
+        public Task<PagedList<ApplicationModel>> ApplicationsGetAsync(ApplicationsFilter filter, CancellationToken cancellationToken = default);
 
-        //public Task<PagedList<ApplicationModel>> GetApplicationsAsync(ApplicationsFilter filter);
+        public Task<PagedList<ApplicationExecutableModel>> ExecutablesGetAsync(ApplicationExecutablesFilter filter, CancellationToken cancellationToken = default);
 
-        //public Task<PagedList<ApplicationExecutableModel>> GetApplicationExecutablesAsync(ApplicationExecutablesFilter filter);
+        public Task<ApplicationModelImage> GetApplicationImageAsync(int id);
 
-        //public Task<ApplicationModelImage> GetApplicationImageAsync(int id);
+        public Task<ApplicationExecutableModelImage> GetApplicationExecutableImageAsync(int id);
 
-        //public Task<ApplicationExecutableModelImage> GetApplicationExecutableImageAsync(int id);
+        #endregion 
 
-        //#endregion
+        #endregion
 
-        //public Task<PagedList<PaymentMethodModel>> GetPaymentMethodsAsync(PaymentMethodsFilter filter);
-
-        //public Task<CreateResult> CreateUserOrderAsync(int userId, OrderCalculateModelOptions calculateOrderOptions);
     }
 }
