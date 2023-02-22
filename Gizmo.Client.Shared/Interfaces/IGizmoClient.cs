@@ -280,27 +280,7 @@ namespace Gizmo.Client
 
         #region UNDER REVIEW 
 
-        public Task<PagedList<PaymentMethodModel>> PaymentMethodsGetAsync(PaymentMethodsFilter filter, CancellationToken cancellationToken = default);
-
         public Task<CreateResult> UserOrderCreateAsync(int userId, OrderCalculateModelOptions calculateOrderOptions, CancellationToken cancellationToken = default);
-
-        #region Products
-
-        /// <summary>
-        /// Returns all product groups based on supplied <paramref name="filter"/>.
-        /// </summary>
-        /// <param name="filter">Filters.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns>Product groups.</returns>
-        public Task<PagedList<ProductGroupModel>> ProductGroupsGetAsync(ProductGroupsFilter filter, CancellationToken cancellationToken = default);
-
-        public Task<PagedList<ProductModel>> ProductsGetAsync(ProductsFilter filter, CancellationToken cancellationToken = default);
-
-        public Task<ProductModel> ProductGetAsync(int id, ModelFilterOptions? options = null);
-
-        public Task<PagedList<ProductBundledModel>> ProductsBundleGetAsync(int id, CancellationToken cancellationToken = default);
-
-        #endregion
 
         #region Applications
 
