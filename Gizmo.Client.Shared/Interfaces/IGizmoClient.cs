@@ -250,6 +250,34 @@ namespace Gizmo.Client
         /// <param name="cancellationToken">Cancellation token.</param>
         public Task<PagedList<FeedModel>> FeedsGetAsync(FeedsFilter filters, CancellationToken cancellationToken = default);
 
+        /// <summary>
+        /// Returns all user product groups based on supplied <paramref name="filters"/>.
+        /// </summary>
+        /// <param name="filters">Filters.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        public Task<PagedList<UserProductGroupModel>> UserProductGroupsGetAsync(UserProductGroupsFilter filters, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Returns all user products based on supplied <paramref name="filters"/>.
+        /// </summary>
+        /// <param name="filters">Filters.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        public Task<PagedList<UserProductModel>> UserProductsGetAsync(UserProductsFilter filters, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Returns the product specified by <paramref name="id"/>.
+        /// </summary>
+        /// <param name="id">Id of the product to get.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        public Task<UserProductModel> UserProductGetAsync(int id, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Returns all user payment methods based on supplied <paramref name="filters"/>.
+        /// </summary>
+        /// <param name="filters">Filters.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        public Task<PagedList<UserPaymentMethodModel>> UserPaymentMethodsGetAsync(UserPaymentMethodsFilter filters, CancellationToken cancellationToken = default);
+
         #region UNDER REVIEW 
 
         public Task<PagedList<PaymentMethodModel>> PaymentMethodsGetAsync(PaymentMethodsFilter filter, CancellationToken cancellationToken = default);
