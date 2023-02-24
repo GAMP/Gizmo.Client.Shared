@@ -286,9 +286,9 @@ namespace Gizmo.Client
 
         #region Applications
 
-        public Task<PagedList<ApplicationGroupModel>> ApplicationGroupsGetAsync(ApplicationGroupsFilter filter, CancellationToken cancellationToken =default);
+        public Task<PagedList<ApplicationGroupModel>> ApplicationGroupsGetAsync(ApplicationGroupsFilter filter, CancellationToken cancellationToken = default);
 
-        public Task<PagedList<ApplicationEnterpriseModel>> EnterprisesGetAsync(ApplicationEnterprisesFilter filter, CancellationToken cancellationToken =default);
+        public Task<PagedList<ApplicationEnterpriseModel>> EnterprisesGetAsync(ApplicationEnterprisesFilter filter, CancellationToken cancellationToken = default);
 
         public Task<PagedList<ApplicationModel>> ApplicationsGetAsync(ApplicationsFilter filter, CancellationToken cancellationToken = default);
 
@@ -299,6 +299,11 @@ namespace Gizmo.Client
         public Task<ApplicationExecutableModelImage> GetApplicationExecutableImageAsync(int id);
 
         #endregion 
+
+        #region PRODUCT
+        Task<PagedList<ProductGroupModel>> ProductGroupsGetAsync(ProductGroupsFilter filter, CancellationToken cToken = default);
+        Task<ProductGroupModel?> ProductGroupGetAsync(int id, CancellationToken cToken = default);
+        #endregion
 
         #endregion
 
