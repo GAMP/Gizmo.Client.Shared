@@ -300,10 +300,7 @@ namespace Gizmo.Client
 
         #endregion 
 
-        #region PRODUCT
-        Task<PagedList<ProductGroupModel>> ProductGroupsGetAsync(ProductGroupsFilter filter, CancellationToken cToken = default);
-        Task<ProductGroupModel?> ProductGroupGetAsync(int id, CancellationToken cToken = default);
-        #endregion
+        Task<UserProductGroupModel?> UserProductGroupGetAsync(int id, CancellationToken cToken = default);
 
         #endregion
 
