@@ -271,7 +271,7 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="id">Id of the product to get.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<UserProductModel> UserProductGetAsync(int id, CancellationToken cancellationToken = default);
+        public Task<UserProductModel?> UserProductGetAsync(int id, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns all user payment methods based on supplied <paramref name="filters"/>.
