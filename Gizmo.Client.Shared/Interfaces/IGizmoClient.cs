@@ -322,11 +322,11 @@ namespace Gizmo.Client
         public Task<PagedList<UserApplicationModel>> UserApplicationsGetAsync(UserApplicationsFilter filters, CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Returns all user application executables based on supplied <paramref name="filters"/>.
+        /// Returns all user executables based on supplied <paramref name="filters"/>.
         /// </summary>
         /// <param name="filters">Filters.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<PagedList<UserApplicationExecutableModel>> UserApplicationExecutablesGetAsync(UserApplicationExecutablesFilter filters, CancellationToken cancellationToken = default);
+        public Task<PagedList<UserExecutableModel>> UserApplicationExecutablesGetAsync(UserExecutablesFilter filters, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns all user application links based on supplied <paramref name="filters"/>.
