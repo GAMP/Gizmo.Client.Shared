@@ -181,7 +181,6 @@ namespace Gizmo.Client
         /// <returns>Recovery procedure completion result.</returns>
         public Task<PasswordRecoveryCompleteResultCode> UserPasswordRecoveryCompleteAsync(string token, string confirmationCode, string newPassword, CancellationToken cancellationToken = default);
 
-
         /// <summary>
         /// Gets user balance.
         /// </summary>
@@ -253,18 +252,18 @@ namespace Gizmo.Client
         public Task<PagedList<FeedModel>> FeedsGetAsync(FeedsFilter filters, CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Returns the user product group specified by <paramref name="id"/>.
-        /// </summary>
-        /// <param name="id">Id of the product to get.</param>
-        /// <param name="cToken">Cancellation token.</param>
-        Task<UserProductGroupModel?> UserProductGroupGetAsync(int id, CancellationToken cToken = default);
-
-        /// <summary>
         /// Returns all user product groups based on supplied <paramref name="filters"/>.
         /// </summary>
         /// <param name="filters">Filters.</param>
         /// <param name="cToken">Cancellation token.</param>
         public Task<PagedList<UserProductGroupModel>> UserProductGroupsGetAsync(UserProductGroupsFilter filters, CancellationToken cToken = default);
+
+        /// <summary>
+        /// Returns the user product group specified by <paramref name="id"/>.
+        /// </summary>
+        /// <param name="id">Id of the product to get.</param>
+        /// <param name="cToken">Cancellation token.</param>
+        public Task<UserProductGroupModel?> UserProductGroupGetAsync(int id, CancellationToken cToken = default);
 
         /// <summary>
         /// Returns the user product specified by <paramref name="id"/>.
@@ -279,20 +278,6 @@ namespace Gizmo.Client
         /// <param name="filters">Filters.</param>
         /// <param name="cToken">Cancellation token.</param>
         public Task<PagedList<UserProductModel>> UserProductsGetAsync(UserProductsFilter filters, CancellationToken cToken = default);
-
-        /// <summary>
-        /// Returns the product specified by <paramref name="id"/>.
-        /// </summary>
-        /// <param name="id">Id of the product to get.</param>
-        /// <param name="cToken">Cancellation token.</param>
-        public Task<ProductModel?> ProductGetAsync(int id, ModelFilterOptions? options = null, CancellationToken cToken = default);
-
-        /// <summary>
-        /// Returns all products based on supplied <paramref name="filters"/>.
-        /// </summary>
-        /// <param name="filters">Filters.</param>
-        /// <param name="cToken">Cancellation token.</param>
-        public Task<PagedList<ProductModel>> ProductsGetAsync(ProductsFilter filters, CancellationToken cToken = default);
 
         /// <summary>
         /// Returns all user payment methods based on supplied <paramref name="filters"/>.
@@ -322,11 +307,25 @@ namespace Gizmo.Client
         public Task<PagedList<UserApplicationModel>> UserApplicationsGetAsync(UserApplicationsFilter filters, CancellationToken cancellationToken = default);
 
         /// <summary>
+        /// Returns the application specified by <paramref name="id"/>.
+        /// </summary>
+        /// <param name="id">Id of the application to get.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        public Task<UserApplicationModel> UserApplicationGetAsync(int id, CancellationToken cancellationToken = default);
+
+        /// <summary>
         /// Returns all user executables based on supplied <paramref name="filters"/>.
         /// </summary>
         /// <param name="filters">Filters.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<PagedList<UserExecutableModel>> UserApplicationExecutablesGetAsync(UserExecutablesFilter filters, CancellationToken cancellationToken = default);
+        public Task<PagedList<UserExecutableModel>> UserExecutablesGetAsync(UserExecutablesFilter filters, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Returns the executable specified by <paramref name="id"/>.
+        /// </summary>
+        /// <param name="id">Id of the executable to get.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        public Task<UserExecutableModel> UserExecutableGetAsync(int id, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns all user application links based on supplied <paramref name="filters"/>.
@@ -336,30 +335,15 @@ namespace Gizmo.Client
         public Task<PagedList<UserApplicationLinkModel>> UserApplicationLinksGetAsync(UserApplicationLinksFilter filters, CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Returns all user executable personal files based on supplied <paramref name="filters"/>.
+        /// Returns all user personal files based on supplied <paramref name="filters"/>.
         /// </summary>
         /// <param name="filters">Filters.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<PagedList<UserExecutablePersonalFileModel>> UserExecutablePersonalFilesGetAsync(UserExecutablePersonalFilesFilter filters, CancellationToken cancellationToken = default);
+        public Task<PagedList<UserPersonalFileModel>> UserPersonalFilesGetAsync(UserPersonalFilesFilter filters, CancellationToken cancellationToken = default);
 
         #region UNDER REVIEW 
 
         public Task<CreateResult> UserOrderCreateAsync(int userId, OrderCalculateModelOptions calculateOrderOptions, CancellationToken cancellationToken = default);
-
-        #region Applications
-
-        public Task<PagedList<ApplicationGroupModel>> ApplicationGroupsGetAsync(ApplicationGroupsFilter filter, CancellationToken cancellationToken = default);
-
-        public Task<PagedList<ApplicationEnterpriseModel>> EnterprisesGetAsync(ApplicationEnterprisesFilter filter, CancellationToken cancellationToken = default);
-
-        public Task<PagedList<ApplicationModel>> ApplicationsGetAsync(ApplicationsFilter filter, CancellationToken cancellationToken = default);
-
-        public Task<PagedList<ApplicationExecutableModel>> ExecutablesGetAsync(ApplicationExecutablesFilter filter, CancellationToken cancellationToken = default);
-                        
-        Task<PagedList<ProductBundledModel>> ProductsBundleGetAsync(int id, CancellationToken cToken);
-
-        #endregion
-
 
         #endregion
 
