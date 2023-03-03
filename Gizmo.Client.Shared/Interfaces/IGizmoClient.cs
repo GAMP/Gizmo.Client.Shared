@@ -298,8 +298,14 @@ namespace Gizmo.Client
         /// Returns all user payment methods based on supplied <paramref name="filters"/>.
         /// </summary>
         /// <param name="filters">Filters.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<PagedList<UserPaymentMethodModel>> UserPaymentMethodsGetAsync(UserPaymentMethodsFilter filters, CancellationToken cancellationToken = default);
+        /// <param name="cToken">Cancellation token.</param>
+        public Task<PagedList<UserPaymentMethodModel>> UserPaymentMethodsGetAsync(UserPaymentMethodsFilter filters, CancellationToken cToken = default);
+
+        /// <summary>
+        /// Returns user payment method by <paramref name="id"/>.
+        /// </summary>
+        /// <param name="cToken">Cancellation token.</param>
+        public Task<UserPaymentMethodModel?> UserPaymentMethodGetAsync(int id, CancellationToken cToken = default);
 
         #region UNDER REVIEW 
 
@@ -318,7 +324,7 @@ namespace Gizmo.Client
         public Task<ApplicationModelImage> GetApplicationImageAsync(int id);
 
         public Task<ApplicationExecutableModelImage> GetApplicationExecutableImageAsync(int id);
-        
+
         Task<PagedList<ProductBundledModel>> ProductsBundleGetAsync(int id, CancellationToken cToken);
 
         #endregion
