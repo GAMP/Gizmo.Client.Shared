@@ -242,8 +242,14 @@ namespace Gizmo.Client
         /// Returns all news based on supplied <paramref name="filters"/>.
         /// </summary>
         /// <param name="filters">Filters.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<PagedList<NewsModel>> NewsGetAsync(NewsFilter filters, CancellationToken cancellationToken = default);
+        /// <param name="cToken">Cancellation token.</param>
+        public Task<PagedList<NewsModel>> NewsGetAsync(NewsFilter filters, CancellationToken cToken = default);
+
+        /// <summary>
+        /// Returns the news based on supplied <paramref name="id"/>.
+        /// </summary>
+        /// <param name="cToken">Cancellation token.</param>
+        public Task<NewsModel?> NewsGetAsync(int id, CancellationToken cToken = default);
 
         /// <summary>
         /// Returns all feeds based on supplied <paramref name="filters"/>.
