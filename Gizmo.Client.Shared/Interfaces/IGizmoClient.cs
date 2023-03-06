@@ -349,7 +349,7 @@ namespace Gizmo.Client
 
         #region UNDER REVIEW 
 
-        public Task<CreateResult> UserOrderCreateAsync(int userId, OrderCalculateModelOptions calculateOrderOptions, CancellationToken cancellationToken = default);
+        public Task<CreateResult> UserOrderCreateAsync(OrderCalculateModelOptions calculateOrderOptions, CancellationToken cancellationToken = default);
 
         #endregion
 
