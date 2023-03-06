@@ -331,7 +331,7 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="id">Id of the executable to get.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<UserExecutableModel> UserExecutableGetAsync(int id, CancellationToken cancellationToken = default);
+        public Task<UserExecutableModel?> UserExecutableGetAsync(int id, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns all user application links based on supplied <paramref name="filters"/>.
