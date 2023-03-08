@@ -134,7 +134,7 @@ namespace Gizmo.Client
         /// <param name="password">User password.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Completion result.</returns>
-        public Task<AccountCreationCompleteResultModel> UserCreateCompleteAsync(UserProfileModelCreate user, string password, CancellationToken cancellationToken = default);
+        public Task<AccountCreationCompleteResultModel> UserCreateCompleteAsync(UserProfileModelCreate user, string password, List<UserAgreementModelState> agreementStates, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Completes user creation.
@@ -144,7 +144,7 @@ namespace Gizmo.Client
         /// <param name="password">User password.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Completion result.</returns>
-        public Task<AccountCreationCompleteResultModelByToken> UserCreateByTokenCompleteAsync(string token, UserProfileModelCreate user, string password, CancellationToken cancellationToken = default);
+        public Task<AccountCreationCompleteResultModelByToken> UserCreateByTokenCompleteAsync(string token, UserProfileModelCreate user, string password, List<UserAgreementModelState> agreementStates, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Gets user password recovery methods for specified user.
