@@ -132,6 +132,7 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="user">User profile model.</param>
         /// <param name="password">User password.</param>
+        /// <param name="agreementStates">User agreement states.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Completion result.</returns>
         public Task<AccountCreationCompleteResultModel> UserCreateCompleteAsync(UserProfileModelCreate user, string password, List<UserAgreementModelState> agreementStates, CancellationToken cancellationToken = default);
@@ -142,6 +143,7 @@ namespace Gizmo.Client
         /// <param name="token">Token value.</param>
         /// <param name="user">User profile model.</param>
         /// <param name="password">User password.</param>
+        /// <param name="agreementStates">User agreement states.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Completion result.</returns>
         public Task<AccountCreationCompleteResultModelByToken> UserCreateByTokenCompleteAsync(string token, UserProfileModelCreate user, string password, List<UserAgreementModelState> agreementStates, CancellationToken cancellationToken = default);
