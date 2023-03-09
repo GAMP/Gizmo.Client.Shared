@@ -358,6 +358,13 @@ namespace Gizmo.Client
         public Task<PagedList<UserApplicationLinkModel>> UserApplicationLinksGetAsync(UserApplicationLinksFilter filters, CancellationToken cancellationToken = default);
 
         /// <summary>
+        /// Returns the user application link specified by <paramref name="id"/>.
+        /// </summary>
+        /// <param name="id">Id of the user application link to get.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        public Task<UserApplicationLinkModel> UserApplicationLinkGetAsync(int id, CancellationToken cancellationToken = default);
+
+        /// <summary>
         /// Returns all user personal files based on supplied <paramref name="filters"/>.
         /// </summary>
         /// <param name="filters">Filters.</param>
