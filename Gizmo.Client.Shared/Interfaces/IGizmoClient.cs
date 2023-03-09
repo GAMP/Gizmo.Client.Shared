@@ -376,7 +376,7 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="id">Id of the personal file to get.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<UserPersonalFileModel> UserPersonalFileGetAsync(int id, CancellationToken cancellationToken = default);
+        public Task<UserPersonalFileModel?> UserPersonalFileGetAsync(int id, CancellationToken cancellationToken = default);
 
         #region UNDER REVIEW 
 
