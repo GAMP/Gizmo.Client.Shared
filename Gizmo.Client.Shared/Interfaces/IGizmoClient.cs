@@ -300,7 +300,7 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="id">Id of the user application enterprise to get.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<UserApplicationEnterpriseModel> UserApplicationEnterpriseGetAsync(int id, CancellationToken cancellationToken = default);
+        public Task<UserApplicationEnterpriseModel?> UserApplicationEnterpriseGetAsync(int id, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns all user application categories based on supplied <paramref name="filters"/>.
@@ -314,7 +314,7 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="id">Id of the user application category to get.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<UserApplicationCategoryModel> UserApplicationCategoryGetAsync(int id, CancellationToken cancellationToken = default);
+        public Task<UserApplicationCategoryModel?> UserApplicationCategoryGetAsync(int id, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns all user applications based on supplied <paramref name="filters"/>.
@@ -362,7 +362,7 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="id">Id of the user application link to get.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<UserApplicationLinkModel> UserApplicationLinkGetAsync(int id, CancellationToken cancellationToken = default);
+        public Task<UserApplicationLinkModel?> UserApplicationLinkGetAsync(int id, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns all user personal files based on supplied <paramref name="filters"/>.
