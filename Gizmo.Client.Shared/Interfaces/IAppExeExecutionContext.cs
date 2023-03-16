@@ -35,5 +35,13 @@
         /// Gets if context is ready for execution.<br></br>Esentially means that we can start the application.
         /// </summary>
         bool IsReady { get; }
+
+        /// <summary>
+        /// Executes context.
+        /// </summary>
+        /// <param name="reprocess">Indicates that reprocessing should be done.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>  
+        /// <exception cref="ArgumentException">thrown if context is already executing.</exception>
+        public Task ExecuteAsync(bool reprocess, CancellationToken cancellationToken=default);
     }
 }
