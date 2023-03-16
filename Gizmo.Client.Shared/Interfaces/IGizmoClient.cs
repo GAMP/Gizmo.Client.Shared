@@ -1,5 +1,6 @@
 ﻿#nullable enable
 
+using Gizmo.Client.Interfaces;
 using Gizmo.Web.Api.Models;
 
 namespace Gizmo.Client
@@ -9,6 +10,23 @@ namespace Gizmo.Client
     /// </summary>
     public interface IGizmoClient
     {
+        #region EVENTS
+
+        /// <summary>
+        /// Raised when one of execution context state changes.
+        /// </summary>
+        event EventHandler<Gizmo.Client.ClientExecutionContextStateArgs>? ExecutionContextStateChage;
+
+        #endregion
+
+        /// <summary>
+        /// Tries to obtain execution context.
+        /// </summary>
+        /// <param name="appExeId">Application executable id.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Execution context result.</returns>
+        Task<IAppExecutionContextResult> AppExecutionContextGetAsync(int appExeId, CancellationToken cancellationToken);
+
         /// <summary>
         /// Initiates user login.
         /// </summary>
