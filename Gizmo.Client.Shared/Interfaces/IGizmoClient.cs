@@ -25,7 +25,46 @@ namespace Gizmo.Client
         /// <param name="appExeId">Application executable id.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Execution context result.</returns>
-        Task<IAppExecutionContextResult> AppExecutionContextGetAsync(int appExeId, CancellationToken cancellationToken);
+        Task<IAppExecutionContextResult> AppExecutionContextGetAsync(int appExeId, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Gets expanded path to the executable file.
+        /// </summary>
+        /// <param name="appExeId">App executable id.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <remarks>The path is always expanded in system and app context.</remarks>
+        /// <returns>Path to the executable, empty string in case of error.</returns>
+        Task<string> AppExePathGetAsync(int appExeId, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Checks if executable file exists.
+        /// </summary>
+        /// <param name="appExeId">App executable id.</param>
+        /// <param name="ignoreDeployments">Indicates if executable deployments should be considered.<br></br>
+        /// We always consider that if executable file exists if any deployments attached to the executable, setting this value to 
+        /// true will ignore deployments and check if actual executable file exists.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>True if file exists, false if file not found or error.</returns>
+        Task<bool> AppExeFileExistsAsync(int appExeId, bool ignoreDeployments = false, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Checks if personal file source directory exists.
+        /// </summary>
+        /// <param name="appExeId">App executable id.</param>
+        /// <param name="personalFileId">Personal file id.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>True if directory exists, false if directory not found or error.</returns>
+        Task<bool> PersonalFileExistAsync(int appExeId, int personalFileId, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Gets expanded path to personal file folder.
+        /// </summary>
+        /// <param name="appExeId">App exe id.</param>
+        /// <param name="personalFileId">Personal file id.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <remarks>The path is always expanded in system,app and executable context.</remarks>
+        /// <returns>Path to the personal file folder, empty string in case of error or if personal file source is registry.</returns>
+        Task<string> PersonalFilePathGetAsync(int appExeId, int personalFileId, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Initiates user login.

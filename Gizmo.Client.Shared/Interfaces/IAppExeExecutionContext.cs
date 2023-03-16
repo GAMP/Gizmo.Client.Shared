@@ -43,5 +43,14 @@
         /// <param name="cancellationToken">Cancellation token.</param>  
         /// <exception cref="ArgumentException">thrown if context is already executing.</exception>
         public Task ExecuteAsync(bool reprocess, CancellationToken cancellationToken=default);
+
+        /// <summary>
+        /// Terminates execution context.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <remarks>
+        /// The function will try to kill any running processes in the context, once all the processes exit it will cause the context to finalize.
+        /// </remarks>
+        public Task TerminateAsync(CancellationToken cancellationToken=default);
     }
 }
