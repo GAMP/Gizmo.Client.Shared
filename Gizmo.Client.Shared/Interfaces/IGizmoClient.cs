@@ -25,7 +25,27 @@ namespace Gizmo.Client
         /// <param name="appExeId">Application executable id.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Execution context result.</returns>
-        Task<IAppExecutionContextResult> AppExecutionContextGetAsync(int appExeId, CancellationToken cancellationToken = default);
+        Task<IAppExecutionContextResult> AppExeExecutionContextGetAsync(int appExeId, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Checks if app exe passes age rating check.
+        /// </summary>
+        /// <param name="appExeId">App exe id.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <remarks>
+        /// The function returns true if age rating is disabled.<br></br>
+        /// The check is done against currently logged in user, if no user logged in or current user is guest true is returned.
+        /// </remarks>
+        /// <returns>True or false if age rating is passed, false in case of error.</returns>
+        Task<bool> AppExePassAgeRatingAsync(int appExeId, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Checks if app exe passes execution limit.
+        /// </summary>
+        /// <param name="appExeId">App exe id.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>True or false if execution limit check is passed, false in case of error.</returns>
+        Task<bool> AppExeExecutionLimitPassAsync(int appExeId, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Gets expanded path to the executable file.
@@ -34,7 +54,7 @@ namespace Gizmo.Client
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <remarks>The path is always expanded in system and app context.</remarks>
         /// <returns>Path to the executable, empty string in case of error.</returns>
-        Task<string> AppExePathGetAsync(int appExeId, CancellationToken cancellationToken);
+        Task<string> AppExePathGetAsync(int appExeId, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Checks if executable file exists.
