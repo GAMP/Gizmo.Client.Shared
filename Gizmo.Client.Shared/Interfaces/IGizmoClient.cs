@@ -461,6 +461,12 @@ namespace Gizmo.Client
         /// <param name="cancellationToken">Cancellation token.</param>
         public Task<UserPersonalFileModel?> UserPersonalFileGetAsync(int id, CancellationToken cancellationToken = default);
 
+        /// <summary>
+        /// Returns the registration verification method.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        public Task<RegistrationVerificationMethod> GetRegistrationVerificationMethodAsync(CancellationToken cancellationToken = default);
+
         #region UNDER REVIEW 
 
         public Task<CreateResult> UserOrderCreateAsync(OrderCalculateModelOptions calculateOrderOptions, CancellationToken cancellationToken = default);
