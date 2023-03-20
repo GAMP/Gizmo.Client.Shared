@@ -1,4 +1,4 @@
-﻿namespace Gizmo.Client.Interfaces
+﻿namespace Gizmo.Client
 {
     public interface IAppExecutionContextResult
     {
