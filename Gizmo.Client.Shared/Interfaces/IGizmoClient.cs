@@ -1,6 +1,5 @@
 ﻿#nullable enable
 
-using Gizmo.Client.Interfaces;
 using Gizmo.Web.Api.Models;
 
 namespace Gizmo.Client
