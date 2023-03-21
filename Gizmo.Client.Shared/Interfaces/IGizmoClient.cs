@@ -16,6 +16,11 @@ namespace Gizmo.Client
         /// </summary>
         event EventHandler<Gizmo.Client.ClientExecutionContextStateArgs>? ExecutionContextStateChage;
 
+        /// <summary>
+        /// Raised when user login state changes.
+        /// </summary>
+        event EventHandler<Gizmo.Client.UserLoginStateChangeEventArgs>? LoginStateChange;
+
         #endregion
 
         /// <summary>
