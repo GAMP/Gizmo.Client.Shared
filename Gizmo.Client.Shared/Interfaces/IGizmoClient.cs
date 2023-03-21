@@ -21,6 +21,8 @@ namespace Gizmo.Client
         /// </summary>
         event EventHandler<Gizmo.Client.UserLoginStateChangeEventArgs>? LoginStateChange;
 
+        public event EventHandler<Gizmo.Client.UserBalanceEventArgs>? UserBalanceChange;
+
         #endregion
 
         /// <summary>
