@@ -473,6 +473,13 @@ namespace Gizmo.Client
         /// <param name="cancellationToken">Cancellation token.</param>
         public Task<RegistrationVerificationMethod> GetRegistrationVerificationMethodAsync(CancellationToken cancellationToken = default);
 
+        /// <summary>
+        /// Returns the password recovery method.
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public Task<UserRecoveryMethod> GetPasswordRecoveryMethodAsync(CancellationToken cancellationToken = default);
+
         #region UNDER REVIEW 
 
         public Task<CreateResult> UserOrderCreateAsync(OrderCalculateModelOptions calculateOrderOptions, CancellationToken cancellationToken = default);
