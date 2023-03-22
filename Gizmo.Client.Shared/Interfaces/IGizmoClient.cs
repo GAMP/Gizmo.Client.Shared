@@ -34,6 +34,13 @@ namespace Gizmo.Client
         #endregion
 
         /// <summary>
+        /// Checks if specified app passes current profile.
+        /// </summary>
+        /// <param name="appId">App id.</param>
+        /// <returns>True if app propfile have passed or there is no profile currently set, otherwise false.</returns>
+        bool AppCurrentProfilePass(int appId);
+
+        /// <summary>
         /// Tries to obtain execution context.
         /// </summary>
         /// <param name="appExeId">Application executable id.</param>
