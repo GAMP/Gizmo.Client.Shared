@@ -29,7 +29,7 @@ namespace Gizmo.Client
         /// <summary>
         /// Raised once system user becomes idle.
         /// </summary>
-        public event EventHandler<Gizmo.Client.UserIdleEventArgs> UserIdleChange;
+        public event EventHandler<Gizmo.Client.UserIdleEventArgs>? UserIdleChange;
 
         #endregion
 
