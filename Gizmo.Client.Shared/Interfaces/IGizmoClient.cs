@@ -24,12 +24,42 @@ namespace Gizmo.Client
         /// <summary>
         /// Raised once current user balance changes.
         /// </summary>
-        public event EventHandler<Gizmo.Client.UserBalanceEventArgs>? UserBalanceChange;
+        event EventHandler<Gizmo.Client.UserBalanceEventArgs>? UserBalanceChange;
 
         /// <summary>
         /// Raised once system user becomes idle.
         /// </summary>
-        public event EventHandler<Gizmo.Client.UserIdleEventArgs> UserIdleChange;
+        event EventHandler<Gizmo.Client.UserIdleEventArgs> UserIdleChange;
+
+        /// <summary>
+        /// Rised when ... .
+        /// </summary>
+        event EventHandler<Gizmo.Client.AppEnterpriseEventArgs>? AppEnterpriseChange;
+
+        /// <summary>
+        /// Rised when ... .
+        /// </summary>
+        event EventHandler<Gizmo.Client.AppCategoryEventArgs>? AppCategoryChange;
+
+        /// <summary>
+        /// Rised when ... .
+        /// </summary>
+        event EventHandler<Gizmo.Client.AppEventArgs>? AppChange;
+
+        /// <summary>
+        /// Rised when ... .
+        /// </summary>
+        event EventHandler<Gizmo.Client.AppExeEventArgs>? AppExeChange;
+
+        /// <summary>
+        /// Rised when ... .
+        /// </summary>
+        event EventHandler<Gizmo.Client.FeedEventArgs>? FeedChange;
+
+        /// <summary>
+        /// Rised when ... .
+        /// </summary>
+        event EventHandler<Gizmo.Client.NewsEventArgs>? NewsChange;
 
         #endregion
 
