@@ -250,11 +250,11 @@ namespace Gizmo.Client
         /// <summary>
         /// Initiates user password recovery by mobile phone.
         /// </summary>
-        /// <param name="username">User name.</param>
+        /// <param name="mobilePhone">Mobile phone.</param>
         /// <param name="confirmationCodeDeliveryMethod">Confirmation code delivery method.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Recovery procedure result.</returns>
-        public Task<PasswordRecoveryStartResultModelByMobile> UserPasswordRecoveryByMobileStartAsync(string username, Gizmo.ConfirmationCodeDeliveryMethod confirmationCodeDeliveryMethod = Gizmo.ConfirmationCodeDeliveryMethod.Undetermined, CancellationToken cancellationToken = default);
+        public Task<PasswordRecoveryStartResultModelByMobile> UserPasswordRecoveryByMobileStartAsync(string mobilePhone, Gizmo.ConfirmationCodeDeliveryMethod confirmationCodeDeliveryMethod = Gizmo.ConfirmationCodeDeliveryMethod.Undetermined, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Initiates user password recovery by email address.
