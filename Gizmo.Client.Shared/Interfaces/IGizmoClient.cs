@@ -22,12 +22,12 @@ namespace Gizmo.Client
         event EventHandler<Gizmo.Client.UserLoginStateChangeEventArgs>? LoginStateChange;
 
         /// <summary>
-        /// Raised once current user balance changes.
+        /// Raised when current user balance changes.
         /// </summary>
         event EventHandler<Gizmo.Client.UserBalanceEventArgs>? UserBalanceChange;
 
         /// <summary>
-        /// Raised once system user becomes idle.
+        /// Raised when system user becomes idle.
         /// </summary>
         event EventHandler<Gizmo.Client.UserIdleEventArgs> UserIdleChange;
 
