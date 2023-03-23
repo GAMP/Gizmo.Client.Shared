@@ -34,42 +34,42 @@ namespace Gizmo.Client
         /// <summary>
         /// Rised when ... .
         /// </summary>
-        event EventHandler<Gizmo.Client.AppEnterpriseEventArgs>? AppEnterpriseChange;
+        event EventHandler<Gizmo.Client.AppEnterpriseChangeEventArgs>? AppEnterpriseChange;
 
         /// <summary>
         /// Rised when ... .
         /// </summary>
-        event EventHandler<Gizmo.Client.AppCategoryEventArgs>? AppCategoryChange;
+        event EventHandler<Gizmo.Client.AppCategoryChangeEventArgs>? AppCategoryChange;
 
         /// <summary>
         /// Rised when ... .
         /// </summary>
-        event EventHandler<Gizmo.Client.AppEventArgs>? AppChange;
+        event EventHandler<Gizmo.Client.AppChangeEventArgs>? AppChange;
 
         /// <summary>
         /// Rised when ... .
         /// </summary>
-        event EventHandler<Gizmo.Client.AppExeEventArgs>? AppExeChange;
+        event EventHandler<Gizmo.Client.AppExeChangeEventArgs>? AppExeChange;
 
         /// <summary>
         /// Rised when ... .
         /// </summary>
-        event EventHandler<Gizmo.Client.FeedEventArgs>? FeedChange;
+        event EventHandler<Gizmo.Client.FeedChangeEventArgs>? FeedChange;
 
         /// <summary>
         /// Rised when ... .
         /// </summary>
-        event EventHandler<Gizmo.Client.NewsEventArgs>? NewsChange;
+        event EventHandler<Gizmo.Client.NewsChangeEventArgs>? NewsChange;
 
         /// <summary>
         /// Rised when ... .
         /// </summary>
-        event EventHandler<Gizmo.Client.PersonalFileChangedEventArgs> PersonalFileChange;
+        event EventHandler<Gizmo.Client.PersonalFileChangeEventArgs> PersonalFileChange;
 
         /// <summary>
         /// Rised when ... .
         /// </summary>
-        event EventHandler<Gizmo.Client.AppLinkChangedEventArgs> AppLinkChange;
+        event EventHandler<Gizmo.Client.AppLinkChangeEventArgs> AppLinkChange;
 
         #endregion
 
