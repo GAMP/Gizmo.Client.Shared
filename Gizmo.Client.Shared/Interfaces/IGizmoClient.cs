@@ -14,62 +14,62 @@ namespace Gizmo.Client
         /// <summary>
         /// Raised when one of execution context state changes.
         /// </summary>
-        event EventHandler<Gizmo.Client.ClientExecutionContextStateArgs>? ExecutionContextStateChage;
+        event EventHandler<ClientExecutionContextStateArgs>? ExecutionContextStateChage;
 
         /// <summary>
         /// Raised when user login state changes.
         /// </summary>
-        event EventHandler<Gizmo.Client.UserLoginStateChangeEventArgs>? LoginStateChange;
+        event EventHandler<UserLoginStateChangeEventArgs>? LoginStateChange;
 
         /// <summary>
         /// Raised when current user balance changes.
         /// </summary>
-        event EventHandler<Gizmo.Client.UserBalanceEventArgs>? UserBalanceChange;
+        event EventHandler<UserBalanceEventArgs>? UserBalanceChange;
 
         /// <summary>
         /// Raised when system user becomes idle.
         /// </summary>
-        event EventHandler<Gizmo.Client.UserIdleEventArgs> UserIdleChange;
+        event EventHandler<UserIdleEventArgs> UserIdleChange;
 
         /// <summary>
-        /// Rised when ... .
+        /// Rised when app enterprise changes.
         /// </summary>
-        event EventHandler<Gizmo.Client.AppEnterpriseChangeEventArgs>? AppEnterpriseChange;
+        event EventHandler<AppEnterpriseChangeEventArgs>? AppEnterpriseChange;
 
         /// <summary>
-        /// Rised when ... .
+        /// Rised when app category changes.
         /// </summary>
-        event EventHandler<Gizmo.Client.AppCategoryChangeEventArgs>? AppCategoryChange;
+        event EventHandler<AppCategoryChangeEventArgs>? AppCategoryChange;
 
         /// <summary>
-        /// Rised when ... .
+        /// Rised when app changes.
         /// </summary>
-        event EventHandler<Gizmo.Client.AppChangeEventArgs>? AppChange;
+        event EventHandler<AppChangeEventArgs>? AppChange;
 
         /// <summary>
-        /// Rised when ... .
+        /// Rised when app exe changes.
         /// </summary>
-        event EventHandler<Gizmo.Client.AppExeChangeEventArgs>? AppExeChange;
+        event EventHandler<AppExeChangeEventArgs>? AppExeChange;
 
         /// <summary>
-        /// Rised when ... .
+        /// Rised when feed changes.
         /// </summary>
-        event EventHandler<Gizmo.Client.FeedChangeEventArgs>? FeedChange;
+        event EventHandler<FeedChangeEventArgs>? FeedChange;
 
         /// <summary>
-        /// Rised when ... .
+        /// Rised when news changes.
         /// </summary>
-        event EventHandler<Gizmo.Client.NewsChangeEventArgs>? NewsChange;
+        event EventHandler<NewsChangeEventArgs>? NewsChange;
 
         /// <summary>
-        /// Rised when ... .
+        /// Rised when personal file changes.
         /// </summary>
-        event EventHandler<Gizmo.Client.PersonalFileChangeEventArgs> PersonalFileChange;
+        event EventHandler<PersonalFileChangeEventArgs> PersonalFileChange;
 
         /// <summary>
-        /// Rised when ... .
+        /// Rised when app link changes.
         /// </summary>
-        event EventHandler<Gizmo.Client.AppLinkChangeEventArgs> AppLinkChange;
+        event EventHandler<AppLinkChangeEventArgs> AppLinkChange;
 
         #endregion
 
