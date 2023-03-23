@@ -61,6 +61,16 @@ namespace Gizmo.Client
         /// </summary>
         event EventHandler<Gizmo.Client.NewsEventArgs>? NewsChange;
 
+        /// <summary>
+        /// Rised when ... .
+        /// </summary>
+        event EventHandler<Gizmo.Client.PersonalFileChangedEventArgs> PersonalFileChange;
+
+        /// <summary>
+        /// Rised when ... .
+        /// </summary>
+        event EventHandler<Gizmo.Client.AppLinkChangedEventArgs> AppLinkChange;
+
         #endregion
 
         /// <summary>
