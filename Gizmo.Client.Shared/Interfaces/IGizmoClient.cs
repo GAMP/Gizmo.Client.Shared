@@ -9,6 +9,20 @@ namespace Gizmo.Client
     /// </summary>
     public interface IGizmoClient
     {
+        #region PROPERTIES
+
+        /// <summary>
+        /// Indicates that a connection is being initiated.
+        /// </summary>
+        bool IsConnected { get; }
+
+        /// <summary>
+        /// Indicates that a connection is made.
+        /// </summary>
+        bool IsConnecting { get; }
+
+        #endregion
+
         #region EVENTS
 
         /// <summary>
@@ -64,12 +78,17 @@ namespace Gizmo.Client
         /// <summary>
         /// Rised when personal file changes.
         /// </summary>
-        event EventHandler<PersonalFileChangeEventArgs> PersonalFileChange;
+        event EventHandler<PersonalFileChangeEventArgs>? PersonalFileChange;
 
         /// <summary>
         /// Rised when app link changes.
         /// </summary>
-        event EventHandler<AppLinkChangeEventArgs> AppLinkChange;
+        event EventHandler<AppLinkChangeEventArgs>? AppLinkChange;
+
+        /// <summary>
+        /// Raised when client connection state changes.
+        /// </summary>
+        event EventHandler<ConnectionStateEventArgs>? ConnectionStateChange;
 
         #endregion
 
