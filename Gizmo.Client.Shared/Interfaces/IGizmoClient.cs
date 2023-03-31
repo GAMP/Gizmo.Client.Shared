@@ -21,6 +21,11 @@ namespace Gizmo.Client
         /// </summary>
         bool IsConnecting { get; }
 
+        /// <summary>
+        /// Gets client number.
+        /// </summary>
+        public int Number { get; }
+
         #endregion
 
         #region EVENTS
