@@ -26,6 +26,16 @@ namespace Gizmo.Client
         /// </summary>
         public int Number { get; }
 
+        /// <summary>
+        /// Indicates that system is currently out of order.
+        /// </summary>
+        public bool IsOutOfOrder { get; }
+
+        /// <summary>
+        /// Indicates that input is curently locked (blocked).
+        /// </summary>
+        public bool IsInputLocked { get; }
+
         #endregion
 
         #region EVENTS
@@ -94,6 +104,16 @@ namespace Gizmo.Client
         /// Raised when client connection state changes.
         /// </summary>
         event EventHandler<ConnectionStateEventArgs>? ConnectionStateChange;
+
+        /// <summary>
+        /// Raised when input lock state changes.
+        /// </summary>
+        event EventHandler<LockStateEventArgs> LockStateChange;
+
+        /// <summary>
+        /// Raised when out of order state changes.
+        /// </summary>
+        event EventHandler<OutOfOrderStateEventArgs> OutOfOrderStateChange;
 
         #endregion
 
