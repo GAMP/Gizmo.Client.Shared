@@ -32,7 +32,7 @@ namespace Gizmo.Client
         public bool IsOutOfOrder { get; }
 
         /// <summary>
-        /// Indicates that input is curently locked (blocked).
+        /// Indicates that input is currently locked (blocked).
         /// </summary>
         public bool IsInputLocked { get; }
 
@@ -43,7 +43,7 @@ namespace Gizmo.Client
         /// <summary>
         /// Raised when one of execution context state changes.
         /// </summary>
-        event EventHandler<ClientExecutionContextStateArgs>? ExecutionContextStateChage;
+        event EventHandler<ClientExecutionContextStateArgs>? ExecutionContextStateChange;
 
         /// <summary>
         /// Raised when user login state changes.
@@ -61,42 +61,42 @@ namespace Gizmo.Client
         event EventHandler<UserIdleEventArgs> UserIdleChange;
 
         /// <summary>
-        /// Rised when app enterprise changes.
+        /// Raised when app enterprise changes.
         /// </summary>
         event EventHandler<AppEnterpriseChangeEventArgs>? AppEnterpriseChange;
 
         /// <summary>
-        /// Rised when app category changes.
+        /// Raised when app category changes.
         /// </summary>
         event EventHandler<AppCategoryChangeEventArgs>? AppCategoryChange;
 
         /// <summary>
-        /// Rised when app changes.
+        /// Raised when app changes.
         /// </summary>
         event EventHandler<AppChangeEventArgs>? AppChange;
 
         /// <summary>
-        /// Rised when app exe changes.
+        /// Raised when app exe changes.
         /// </summary>
         event EventHandler<AppExeChangeEventArgs>? AppExeChange;
 
         /// <summary>
-        /// Rised when feed changes.
+        /// Raised when feed changes.
         /// </summary>
         event EventHandler<FeedChangeEventArgs>? FeedChange;
 
         /// <summary>
-        /// Rised when news changes.
+        /// Raised when news changes.
         /// </summary>
         event EventHandler<NewsChangeEventArgs>? NewsChange;
 
         /// <summary>
-        /// Rised when personal file changes.
+        /// Raised when personal file changes.
         /// </summary>
         event EventHandler<PersonalFileChangeEventArgs>? PersonalFileChange;
 
         /// <summary>
-        /// Rised when app link changes.
+        /// Raised when app link changes.
         /// </summary>
         event EventHandler<AppLinkChangeEventArgs>? AppLinkChange;
 
@@ -121,7 +121,7 @@ namespace Gizmo.Client
         /// Checks if specified app passes current profile.
         /// </summary>
         /// <param name="appId">App id.</param>
-        /// <returns>True if app propfile have passed or there is no profile currently set, otherwise false.</returns>
+        /// <returns>True if app profile have passed or there is no profile currently set, otherwise false.</returns>
         bool AppCurrentProfilePass(int appId);
 
         /// <summary>
