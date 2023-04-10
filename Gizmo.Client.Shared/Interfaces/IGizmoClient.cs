@@ -1,6 +1,7 @@
 ﻿#nullable enable
 
 using Gizmo.Web.Api.Models;
+using Gizmo.Web.Api.Models.Abstractions;
 
 namespace Gizmo.Client
 {
@@ -578,6 +579,10 @@ namespace Gizmo.Client
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         public Task<UserRecoveryMethod> GetPasswordRecoveryMethodAsync(CancellationToken cancellationToken = default);
+
+        public Task<PagedList<PopularExecutableModel>> GetPopularExecutablesAsync(PopularExecutablesFilter filters, CancellationToken cancellationToken = default);
+
+        public Task<PagedList<PopularProductModel>> GetPopularProductsAsync(PopularProductsFilter filters, CancellationToken cancellationToken = default);
 
         #region UNDER REVIEW 
 
