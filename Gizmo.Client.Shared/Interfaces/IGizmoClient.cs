@@ -571,18 +571,18 @@ namespace Gizmo.Client
         /// Returns the registration verification method.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<RegistrationVerificationMethod> GetRegistrationVerificationMethodAsync(CancellationToken cancellationToken = default);
+        public Task<RegistrationVerificationMethod> RegistrationVerificationMethodGetAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns the password recovery method.
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public Task<UserRecoveryMethod> GetPasswordRecoveryMethodAsync(CancellationToken cancellationToken = default);
+        public Task<UserRecoveryMethod> PasswordRecoveryMethodGetAsync(CancellationToken cancellationToken = default);
 
-        public Task<PagedList<PopularExecutableModel>> GetPopularExecutablesAsync(PopularExecutablesFilter filters, CancellationToken cancellationToken = default);
+        public Task<PagedList<PopularExecutableModel>> PopularExecutablesGetAsync(PopularExecutablesFilter filters, CancellationToken cancellationToken = default);
 
-        public Task<PagedList<PopularProductModel>> GetPopularProductsAsync(PopularProductsFilter filters, CancellationToken cancellationToken = default);
+        public Task<PagedList<PopularProductModel>> PopularProductsGetAsync(PopularProductsFilter filters, CancellationToken cancellationToken = default);
 
         #region UNDER REVIEW 
 
