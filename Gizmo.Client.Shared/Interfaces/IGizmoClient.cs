@@ -580,9 +580,29 @@ namespace Gizmo.Client
         /// <returns></returns>
         public Task<UserRecoveryMethod> PasswordRecoveryMethodGetAsync(CancellationToken cancellationToken = default);
 
-        public Task<PagedList<PopularExecutableModel>> PopularExecutablesGetAsync(PopularExecutablesFilter filters, CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Returns the list of user popular applications.
+        /// </summary>
+        /// <param name="filters">Filters.</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public Task<IEnumerable<PopularApplicationModel>> UserPopularApplicationsGetAsync(UserPopularApplicationsFilter filters, CancellationToken cancellationToken = default);
 
-        public Task<PagedList<PopularProductModel>> PopularProductsGetAsync(PopularProductsFilter filters, CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Returns the list of popular executables.
+        /// </summary>
+        /// <param name="filters">Filters.</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public Task<IEnumerable<PopularExecutableModel>> UserPopularExecutablesGetAsync(UserPopularExecutablesFilter filters, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Returns the list of user popular products.
+        /// </summary>
+        /// <param name="filters">Filters.</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public Task<IEnumerable<PopularProductModel>> UserPopularProductsGetAsync(UserPopularProductsFilter filters, CancellationToken cancellationToken = default);
 
         #region UNDER REVIEW 
 
