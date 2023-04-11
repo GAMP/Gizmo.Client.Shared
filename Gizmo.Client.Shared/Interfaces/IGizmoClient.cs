@@ -166,10 +166,10 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="appExeId">App executable id.</param>
         /// <param name="ignoreDeployments">Indicates if executable deployments should be considered.<br></br>
-        /// We always consider that if executable file exists if any deployments attached to the executable, setting this value to 
+        /// We always consider that executable file exists if any deployments attached to the executable, setting this value to 
         /// true will ignore deployments and check if actual executable file exists.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns>True if file exists, false if file not found or error.</returns>
+        /// <returns>True if app exe has deployments or file exists, false if file not found or error.</returns>
         Task<bool> AppExeFileExistsAsync(int appExeId, bool ignoreDeployments = false, CancellationToken cancellationToken = default);
 
         /// <summary>
