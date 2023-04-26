@@ -604,6 +604,13 @@ namespace Gizmo.Client
         /// <returns></returns>
         public Task<IEnumerable<PopularProductModel>> UserPopularProductsGetAsync(UserPopularProductsFilter filters, CancellationToken cancellationToken = default);
 
+        /// <summary>
+        /// Generates host QR Code.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Generated host qr code.</returns>
+        public Task<HostQRCodeResult> HostQRCodeGeneratAsync(CancellationToken cancellationToken =default);
+
         #region UNDER REVIEW 
 
         public Task<CreateResult> UserOrderCreateAsync(OrderCalculateModelOptions calculateOrderOptions, CancellationToken cancellationToken = default);
