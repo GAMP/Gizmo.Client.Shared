@@ -609,7 +609,15 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Generated host qr code.</returns>
-        public Task<HostQRCodeResult> HostQRCodeGeneratAsync(CancellationToken cancellationToken =default);
+        public Task<HostQRCodeResult> HostQRCodeGeneratAsync(CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Returns the list of user orders.
+        /// </summary>
+        /// <param name="filters">Filters.</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public Task<PagedList<UserOrderModel>> UserOrdersGetAsync(UserOrdersFilter filters, CancellationToken cancellationToken = default);
 
         #region UNDER REVIEW 
 
