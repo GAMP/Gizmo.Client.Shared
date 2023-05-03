@@ -619,11 +619,9 @@ namespace Gizmo.Client
         /// <returns></returns>
         public Task<PagedList<UserOrderModel>> UserOrdersGetAsync(UserOrdersFilter filters, CancellationToken cancellationToken = default);
 
-        #region UNDER REVIEW 
+        public Task<bool> UserProductAvailabilityCheckAsync(UserOrderLineModelCreate userOrderLineModelCreate, CancellationToken cancellationToken = default);
 
-        public Task<CreateResult> UserOrderCreateAsync(OrderCalculateModelOptions calculateOrderOptions, CancellationToken cancellationToken = default);
-
-        #endregion
+        public Task<UserOrderCreateResult> UserOrderCreateAsync(UserOrderModelCreate userOrderModelCreate, CancellationToken cancellationToken = default);
 
     }
 }
