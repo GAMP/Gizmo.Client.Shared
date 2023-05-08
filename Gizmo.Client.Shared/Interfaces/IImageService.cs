@@ -17,6 +17,7 @@ namespace Gizmo.Client
         /// <remarks>
         /// The function should never throw, empty string is returned in case of an error or in case image hash cant be obtained.
         /// </remarks>
+        /// <exception cref="OperationCanceledException"></exception>
         Task<string> ImageHashGetAsync(ImageType imageType, int imageId, CancellationToken cancellationToken);
 
         /// <summary>
@@ -31,6 +32,7 @@ namespace Gizmo.Client
         /// Since single product can have multiple images in case of product it should be equal to product image id instead of product id itself.<br></br>
         /// The function should never throw, empty stream is returned in case of an error or in case image data cant be obtained.
         /// </remarks>
+        /// <exception cref="OperationCanceledException"></exception>
         ValueTask<Stream> ImageStreamGetAsync(ImageType imageType, int imageId, CancellationToken cancellationToken);
     }
 }
