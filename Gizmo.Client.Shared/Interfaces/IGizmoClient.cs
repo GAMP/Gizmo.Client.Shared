@@ -72,6 +72,11 @@ namespace Gizmo.Client
         event EventHandler<AppCategoryChangeEventArgs>? AppCategoryChange;
 
         /// <summary>
+        /// Raised when host group changes.
+        /// </summary>
+        event EventHandler<HostGroupChangeEventArgs>? HostGroupChange;
+
+        /// <summary>
         /// Raised when app changes.
         /// </summary>
         event EventHandler<AppChangeEventArgs>? AppChange;
@@ -641,6 +646,22 @@ namespace Gizmo.Client
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns></returns>
         public Task<bool> IsClientRegistrationEnabledGetAsync(CancellationToken cancellationToken = default);
-        
+
+        /// <summary>
+        /// Returns the list of user host groups.
+        /// </summary>
+        /// <param name="filters">Filters.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns></returns>
+        public Task<PagedList<UserHostGroupModel>> UserHostGroupsGetAsync(UserHostGroupsFilter filters, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Returns the user host group specified by <paramref name="id"/>.
+        /// </summary>
+        /// <param name="id">Id of the executable to get.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns></returns>
+        public Task<UserHostGroupModel?> UserHostGroupGetAsync(int id, CancellationToken cancellationToken = default);
+
     }
 }
