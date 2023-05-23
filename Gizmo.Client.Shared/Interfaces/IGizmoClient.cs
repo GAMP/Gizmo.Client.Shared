@@ -663,5 +663,20 @@ namespace Gizmo.Client
         /// <returns></returns>
         public Task<UserHostGroupModel?> UserHostGroupGetAsync(int id, CancellationToken cancellationToken = default);
 
+        /// <summary>
+        /// Attempts to enter full screen mode.
+        /// </summary>
+        /// <param name="enterOptions">Options.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Result.</returns>
+        Task<FullScreenEnterResult> EnterFullSceenAsync(FullScreenEnterOptions? enterOptions = default, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Attempts to exit full screen mode.
+        /// </summary>
+        /// <param name="enterOptions">Options.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Result.</returns>
+        Task<FullScreenExitResult> ExitFullSceenAsync(FullScreenExitOptions? exitOptions = default, CancellationToken cancellationToken = default);
     }
 }
