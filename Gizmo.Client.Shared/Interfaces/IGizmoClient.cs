@@ -668,7 +668,10 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="enterOptions">Options.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns>Result.</returns>
+        /// <remarks>
+        /// This function does not throw any exceptions and any errors are logged instead.
+        /// </remarks>
+        /// <returns>Enter result.</returns>
         Task<FullScreenEnterResult> EnterFullSceenAsync(FullScreenEnterOptions? enterOptions = default, CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -676,7 +679,10 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="enterOptions">Options.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns>Result.</returns>
+        /// <remarks>
+        /// This function does not throw any exceptions and any errors are logged instead.
+        /// </remarks>
+        /// <returns>Exit result.</returns>
         Task<FullScreenExitResult> ExitFullSceenAsync(FullScreenExitOptions? exitOptions = default, CancellationToken cancellationToken = default);
     }
 }
