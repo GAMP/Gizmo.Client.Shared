@@ -664,6 +664,13 @@ namespace Gizmo.Client
         public Task<UserHostGroupModel?> UserHostGroupGetAsync(int id, CancellationToken cancellationToken = default);
 
         /// <summary>
+        /// Returns the id of the current host group.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns></returns>
+        public Task<int?> CurrentHostGroupGetAsync(CancellationToken cancellationToken = default);
+
+        /// <summary>
         /// Attempts to enter full screen mode.
         /// </summary>
         /// <param name="enterOptions">Options.</param>
