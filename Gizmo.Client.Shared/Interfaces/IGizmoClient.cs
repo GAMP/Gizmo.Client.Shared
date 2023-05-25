@@ -28,6 +28,11 @@ namespace Gizmo.Client
         public int Number { get; }
 
         /// <summary>
+        /// Gets client host group id.
+        /// </summary>
+        public int? HostGroupId { get; }
+
+        /// <summary>
         /// Indicates that system is currently out of order.
         /// </summary>
         public bool IsOutOfOrder { get; }
@@ -662,13 +667,6 @@ namespace Gizmo.Client
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns></returns>
         public Task<UserHostGroupModel?> UserHostGroupGetAsync(int id, CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Returns the id of the current host group.
-        /// </summary>
-        /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns></returns>
-        public Task<int?> CurrentHostGroupGetAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Attempts to enter full screen mode.
