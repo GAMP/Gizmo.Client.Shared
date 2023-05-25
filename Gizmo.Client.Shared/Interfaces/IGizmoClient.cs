@@ -689,5 +689,14 @@ namespace Gizmo.Client
         /// </remarks>
         /// <returns>Exit result.</returns>
         Task<FullScreenExitResult> ExitFullSceenAsync(FullScreenExitOptions? exitOptions = default, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Notifies user of app exe failed launch.
+        /// </summary>
+        /// <param name="appExeId">App exe id.</param>
+        /// <param name="reason">Failure reason.</param>
+        /// <param name="exception">Optional exception.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        public Task NotifyAppExeLaunchFailureAsync(int appExeId, AppExeLaunchFailReason reason = AppExeLaunchFailReason.Unknown, Exception? exception =null, CancellationToken cancellationToken = default);
     }
 }
