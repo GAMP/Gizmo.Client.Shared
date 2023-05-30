@@ -20,7 +20,7 @@ namespace Gizmo.Client
         /// The function will only throw <see cref="OperationCanceledException"/>, null is returned in case of an error or <see cref="Stream.Null"/> in case image not set.
         /// </remarks>
         /// <exception cref="OperationCanceledException"></exception>
-        Task<string> ImageSourceGetAsync(ImageType imageType, int imageId, CancellationToken cToken);
+        ValueTask<string> ImageSourceGetAsync(ImageType imageType, int imageId, CancellationToken cToken);
 
         /// <summary>
         /// Requests image stream.
