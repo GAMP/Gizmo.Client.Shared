@@ -8,24 +8,26 @@ namespace Gizmo.Client
     public interface IImageService
     {
         /// <summary>
-        /// Requests image hash.
+        /// Requests image source.
         /// </summary>
         /// <param name="imageType">Image type.</param>
         /// <param name="imageId">Image id.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns>Image hash.</returns>
+        /// <param name="cToken">Cancellation token.</param>
+        /// <returns>Image source.</returns>
         /// <remarks>
-        /// The function will only throw <see cref="OperationCanceledException"/> , null is returned in case of an error or empty string in case image not set.
+        /// The <paramref name="imageId"/> depends on ImageType, in case of executable or application the <paramref name="imageId"/> should be equal to application or executable id.<br></br>
+        /// Since single product can have multiple images in case of product it should be equal to product image id instead of product id itself.<br></br>
+        /// The function will only throw <see cref="OperationCanceledException"/>, null is returned in case of an error or <see cref="Stream.Null"/> in case image not set.
         /// </remarks>
         /// <exception cref="OperationCanceledException"></exception>
-        Task<string> ImageHashGetAsync(ImageType imageType, int imageId, CancellationToken cancellationToken);
+        Task<string> ImageSourceGetAsync(ImageType imageType, int imageId, CancellationToken cToken);
 
         /// <summary>
         /// Requests image stream.
         /// </summary>
         /// <param name="imageType">Image type.</param>
         /// <param name="imageId">Image id.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <param name="cToken">Cancellation token.</param>
         /// <returns>Image stream.</returns>
         /// <remarks>
         /// The <paramref name="imageId"/> depends on ImageType, in case of executable or application the <paramref name="imageId"/> should be equal to application or executable id.<br></br>
@@ -33,6 +35,6 @@ namespace Gizmo.Client
         /// The function will only throw <see cref="OperationCanceledException"/>, null is returned in case of an error or <see cref="Stream.Null"/> in case image not set.
         /// </remarks>
         /// <exception cref="OperationCanceledException"></exception>
-        ValueTask<Stream> ImageStreamGetAsync(ImageType imageType, int imageId, CancellationToken cancellationToken);
+        ValueTask<Stream> ImageStreamGetAsync(ImageType imageType, int imageId, CancellationToken cToken);
     }
 }
