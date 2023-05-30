@@ -698,5 +698,15 @@ namespace Gizmo.Client
         /// <param name="exception">Optional exception.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         public Task NotifyAppExeLaunchFailureAsync(int appExeId, AppExeLaunchFailReason reason = AppExeLaunchFailReason.Unknown, Exception? exception =null, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Gets current cache location path.
+        /// </summary>
+        /// <remarks>
+        /// Default path will be returned if one is not provided by client settings.<br></br>
+        /// Default path location: C:\ProgramData\Application Data\NETProjects\Gizmo Client\Cache
+        /// </remarks>
+        /// <returns>Cache folder path.</returns>
+        string CachePathGet();
     }
 }
