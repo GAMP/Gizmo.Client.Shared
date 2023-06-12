@@ -126,6 +126,11 @@ namespace Gizmo.Client
         /// </summary>
         event EventHandler<OutOfOrderStateEventArgs> OutOfOrderStateChange;
 
+        /// <summary>
+        /// Raised when host reservation changes.
+        /// </summary>
+        event EventHandler<ReservationChangeEventArgs> ReservationChange;
+
         #endregion
 
         /// <summary>
@@ -667,6 +672,13 @@ namespace Gizmo.Client
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns></returns>
         public Task<UserHostGroupModel?> UserHostGroupGetAsync(int id, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Returns the next host reservation.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns></returns>
+        public Task<NextHostReservationModel?> NextHostReservationGetAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Attempts to enter full screen mode.
