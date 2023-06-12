@@ -1,5 +1,6 @@
 ﻿#nullable enable
 
+using Gizmo.Client.UI;
 using Gizmo.Web.Api.Models;
 using Gizmo.Web.Api.Models.Abstractions;
 
@@ -679,6 +680,13 @@ namespace Gizmo.Client
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns></returns>
         public Task<NextHostReservationModel?> NextHostReservationGetAsync(CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Returns the reservation configuration.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns></returns>
+        public Task<ClientReservationOptions> ReservationConfigurationGetAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Attempts to enter full screen mode.
