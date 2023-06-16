@@ -2,7 +2,6 @@
 
 using Gizmo.Client.UI;
 using Gizmo.Web.Api.Models;
-using Gizmo.Web.Api.Models.Abstractions;
 
 namespace Gizmo.Client
 {
@@ -728,5 +727,15 @@ namespace Gizmo.Client
         /// </remarks>
         /// <returns>Cache folder path.</returns>
         string CachePathGet();
+
+        /// <summary>
+        /// Enter into user lock mode.
+        /// </summary>
+        public Task UserLockEnterAsync();
+
+        /// <summary>
+        /// Exit user lock mode.
+        /// </summary>
+        public Task UserLockExitAsync();
     }
 }
