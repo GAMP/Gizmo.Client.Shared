@@ -725,8 +725,32 @@ namespace Gizmo.Client
         /// Default path will be returned if one is not provided by client settings.<br></br>
         /// Default path location: C:\ProgramData\Application Data\NETProjects\Gizmo Client\Cache
         /// </remarks>
-        /// <returns>Cache folder path.</returns>
+        /// <returns>Cache folder path, null if information cannot be obtained.</returns>
+        /// <remarks>
+        /// The function does not check if folder exists.
+        /// </remarks>
         string CachePathGet();
+
+        /// <summary>
+        /// Gets current skin location path.
+        /// </summary>
+        /// <returns>Skin path, null if information cannot be obtained.</returns>
+        /// <remarks>
+        /// The function will return current skin path based on client data path.<br></br>
+        /// The function does not check if folder exists.
+        /// </remarks>
+        string GetCurrentSkinPath();
+
+        /// <summary>
+        /// Gets current rotator location path.
+        /// </summary>
+        /// <remarks>
+        /// This function will attempt to check rotator options specified path.
+        /// If path is not set or does not exists an attempt will be made to check if rotator folder exists inside current skin folder and that path
+        /// will be used. Null will be returned if none of the paths set or exists.
+        /// </remarks>
+        /// <returns>Rotator path, null if information cannot be obtained.</returns>
+        string GetCurrentRotatorPath();
 
         /// <summary>
         /// Enter into user lock mode.
