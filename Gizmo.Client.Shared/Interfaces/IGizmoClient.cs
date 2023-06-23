@@ -131,6 +131,11 @@ namespace Gizmo.Client
         /// </summary>
         event EventHandler<ReservationChangeEventArgs> ReservationChange;
 
+        /// <summary>
+        /// Raised when usage session changes.
+        /// </summary>
+        public event EventHandler<UsageSessionChangedEventArgs> UsageSessionChanged;
+
         #endregion
 
         /// <summary>
