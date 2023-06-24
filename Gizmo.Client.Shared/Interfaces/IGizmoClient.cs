@@ -134,7 +134,7 @@ namespace Gizmo.Client
         /// <summary>
         /// Raised when usage session changes.
         /// </summary>
-        public event EventHandler<UsageSessionChangedEventArgs> UsageSessionChanged;
+        public event EventHandler<UsageSessionChangedEventArgs> UsageSessionChange;
 
         #endregion
 
