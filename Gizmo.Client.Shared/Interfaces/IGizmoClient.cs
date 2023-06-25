@@ -766,5 +766,11 @@ namespace Gizmo.Client
         /// Exit user lock mode.
         /// </summary>
         public Task UserLockExitAsync();
+
+        /// <summary>
+        /// Attempts to abort and kill any active execution context that dont have execution limit enabled.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        Task ExecutionContextKillNonLimitedAsync(CancellationToken cancellationToken = default);
     }
 }
