@@ -122,6 +122,11 @@ namespace Gizmo.Client
         event EventHandler<LockStateEventArgs> LockStateChange;
 
         /// <summary>
+        /// Raised when grace period changes.
+        /// </summary>
+        event EventHandler<GracePeriodChangeEventArgs> GracePeriodChange;
+
+        /// <summary>
         /// Raised when out of order state changes.
         /// </summary>
         event EventHandler<OutOfOrderStateEventArgs> OutOfOrderStateChange;
