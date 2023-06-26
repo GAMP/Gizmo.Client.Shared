@@ -42,6 +42,11 @@ namespace Gizmo.Client
         /// </summary>
         public bool IsInputLocked { get; }
 
+        /// <summary>
+        /// Indicates that current system user is idle.
+        /// </summary>
+        public bool IsUserIdle { get; }
+
         #endregion
 
         #region EVENTS
@@ -726,7 +731,7 @@ namespace Gizmo.Client
         /// <param name="reason">Failure reason.</param>
         /// <param name="exception">Optional exception.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task NotifyAppExeLaunchFailureAsync(int appExeId, AppExeLaunchFailReason reason = AppExeLaunchFailReason.Unknown, Exception? exception =null, CancellationToken cancellationToken = default);
+        public Task NotifyAppExeLaunchFailureAsync(int appExeId, AppExeLaunchFailReason reason = AppExeLaunchFailReason.Unknown, Exception? exception = null, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Gets current cache location path.
