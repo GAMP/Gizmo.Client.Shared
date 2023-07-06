@@ -638,7 +638,10 @@ namespace Gizmo.Client
         /// Generates host QR Code.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns>Generated host qr code.</returns>
+        /// <returns>Generated host qr code. <see cref="HostQRCodeResult.QRCode"/> string will be empty in case of an error.</returns>
+        /// <remarks>
+        /// The qr code is represented with SVG format.
+        /// </remarks>
         public Task<HostQRCodeResult> HostQRCodeGeneratAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
