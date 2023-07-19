@@ -33,6 +33,11 @@ namespace Gizmo.Client
         public int? HostGroupId { get; }
 
         /// <summary>
+        /// Gets if user logout is enabled.
+        /// </summary>
+        public bool IsUserLogoutEnabled { get; }
+
+        /// <summary>
         /// Indicates that system is currently out of order.
         /// </summary>
         public bool IsOutOfOrder { get; }
@@ -642,7 +647,7 @@ namespace Gizmo.Client
         /// <remarks>
         /// The qr code is represented with SVG format.
         /// </remarks>
-        public Task<HostQRCodeResult> HostQRCodeGeneratAsync(CancellationToken cancellationToken = default);
+        public Task<HostQRCodeResult> HostQRCodeGenerateAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns the list of user orders.
