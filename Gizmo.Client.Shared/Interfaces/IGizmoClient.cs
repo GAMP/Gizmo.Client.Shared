@@ -52,6 +52,11 @@ namespace Gizmo.Client
         /// </summary>
         public bool IsUserIdle { get; }
 
+        /// <summary>
+        /// Indicates that there is currently an user logged in.
+        /// </summary>
+        public bool IsUserLoggedIn { get; }
+
         #endregion
 
         #region EVENTS
