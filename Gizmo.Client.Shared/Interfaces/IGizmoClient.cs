@@ -156,6 +156,11 @@ namespace Gizmo.Client
         /// </summary>
         public event EventHandler<UsageSessionChangeEventArgs> UsageSessionChange;
 
+        /// <summary>
+        /// Raised when client is connected to server and ready to startup.
+        /// </summary>
+        public event EventHandler<StartUpEventArgs> StartUp;
+
         #endregion
 
         /// <summary>
