@@ -25,5 +25,7 @@
         public const string UserProductsRoute = "/profile/products";
         public const string UserPurchasesRoute = "/profile/purchases";
         public const string UserSettingsRoute = "/settings";
+
+        public const string NotFoundRoute = "/notfound";
     }
 }
