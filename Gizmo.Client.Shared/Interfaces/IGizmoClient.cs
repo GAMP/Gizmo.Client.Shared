@@ -800,5 +800,7 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
         Task ExecutionContextKillNonLimitedAsync(CancellationToken cancellationToken = default);
+
+        public Task<List<UserUsageTimeLevelModel>> UserUsageTimeLevelsGetAsync(CancellationToken cToken);
     }
 }
