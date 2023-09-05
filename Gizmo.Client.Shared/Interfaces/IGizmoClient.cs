@@ -802,5 +802,7 @@ namespace Gizmo.Client
         Task ExecutionContextKillNonLimitedAsync(CancellationToken cancellationToken = default);
 
         public Task<List<UserUsageTimeLevelModel>> UserUsageTimeLevelsGetAsync(CancellationToken cToken);
+
+        public Task<UserCreditLimitModel> UserCreditLimitGetAsync(CancellationToken cToken = default);
     }
 }
