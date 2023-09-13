@@ -800,5 +800,11 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
         Task ExecutionContextKillNonLimitedAsync(CancellationToken cancellationToken = default);
+
+        public Task<CreateResult> AssistanceRequestCreateAsync(AssistanceRequestModelUserCreate assistanceRequestModelUserCreate, CancellationToken cancellationToken = default);
+
+        public Task<bool> AssistanceRequestAnyPendingGetAsync(CancellationToken cancellationToken = default);
+
+        public Task<UpdateResult> AssistanceRequestPendingCancelAsync(CancellationToken cancellationToken = default);
     }
 }
