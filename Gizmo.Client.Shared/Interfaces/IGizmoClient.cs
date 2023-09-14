@@ -803,10 +803,6 @@ namespace Gizmo.Client
         
         public Task<PagedList<AssistanceRequestTypeModel>> AssistanceRequestTypesGetAsync(AssistanceRequestTypeFilter filter, CancellationToken cancellationToken = default);
 
-        public Task<AssistanceRequestTypeModel?> AssistanceRequestTypeGetAsync(int id, CancellationToken cToken = default);
-
-        public Task<PagedList<AssistanceRequestTypeModel>> AssistanceRequestTypesGetAsync(AssistanceRequestTypeFilter filter, CancellationToken cancellationToken = default);
-
         public Task<AssistanceRequestTypeModel?> AssistanceRequestTypeGetAsync(int id, CancellationToken cancellationToken = default);
 
         public Task<CreateResult> AssistanceRequestCreateAsync(AssistanceRequestModelUserCreate assistanceRequestModelUserCreate, CancellationToken cancellationToken = default);
