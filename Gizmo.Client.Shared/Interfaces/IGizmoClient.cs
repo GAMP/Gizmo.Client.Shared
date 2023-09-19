@@ -1,6 +1,7 @@
 ﻿#nullable enable
 
 using Gizmo.Client.UI;
+using Gizmo.Web.Api.Messaging;
 using Gizmo.Web.Api.Models;
 
 namespace Gizmo.Client
@@ -160,6 +161,11 @@ namespace Gizmo.Client
         /// Raised when client is connected to server and ready to startup.
         /// </summary>
         public event EventHandler<StartUpEventArgs> StartUp;
+
+        /// <summary>
+        /// Raised when api event message received.
+        /// </summary>
+        public event EventHandler<IAPIEventMessage> OnAPIEventMessage;
 
         #endregion
 
