@@ -1,6 +1,7 @@
 ﻿#nullable enable
 
 using Gizmo.Client.UI;
+using Gizmo.Web.Api.Messaging;
 using Gizmo.Web.Api.Models;
 
 namespace Gizmo.Client
@@ -160,6 +161,11 @@ namespace Gizmo.Client
         /// Raised when client is connected to server and ready to startup.
         /// </summary>
         public event EventHandler<StartUpEventArgs> StartUp;
+
+        /// <summary>
+        /// Raised when api event message received.
+        /// </summary>
+        public event EventHandler<IAPIEventMessage> OnAPIEventMessage;
 
         #endregion
 
@@ -804,5 +810,15 @@ namespace Gizmo.Client
         public Task<List<UserUsageTimeLevelModel>> UserUsageTimeLevelsGetAsync(CancellationToken cToken);
 
         public Task<UserCreditLimitModel> UserCreditLimitGetAsync(CancellationToken cToken = default);
+        
+        public Task<PagedList<AssistanceRequestTypeModel>> AssistanceRequestTypesGetAsync(AssistanceRequestTypeFilter filter, CancellationToken cancellationToken = default);
+
+        public Task<AssistanceRequestTypeModel?> AssistanceRequestTypeGetAsync(int id, CancellationToken cancellationToken = default);
+
+        public Task<CreateResult> AssistanceRequestCreateAsync(AssistanceRequestModelUserCreate assistanceRequestModelUserCreate, CancellationToken cancellationToken = default);
+
+        public Task<bool> AssistanceRequestAnyPendingGetAsync(CancellationToken cancellationToken = default);
+
+        public Task<UpdateResult> AssistanceRequestPendingCancelAsync(CancellationToken cancellationToken = default);
     }
 }
