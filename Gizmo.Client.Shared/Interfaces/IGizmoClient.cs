@@ -343,6 +343,13 @@ namespace Gizmo.Client
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Required info, the value will be null if no default user group exist.</returns>
         public Task<UserModelRequiredInfo?> UserGroupDefaultRequiredInfoGetAsync(CancellationToken cancellationToken = default);
+        
+        /// <summary>
+        /// Gets required user info for current user group.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Required info for current user group.</returns>
+        public Task<UserModelRequiredInfo?> UserGroupCurrentRequiredInfoGetAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Initiates user creation by email address.
