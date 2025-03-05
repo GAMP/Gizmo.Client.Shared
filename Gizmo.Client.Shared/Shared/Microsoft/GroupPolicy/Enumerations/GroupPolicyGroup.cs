@@ -33,22 +33,4 @@
         WindowsErrorReporting = 26,
         WindowsMediaPlayer = 27,
     }
-
-    public enum GroupPolicyTargetOperatingSystem
-    {
-        /// <summary>
-        /// Windows 10.
-        /// </summary>
-        Windows10 = 1,
-
-        /// <summary>
-        /// Windows 2.
-        /// </summary>
-        Windows11 = 2,
-
-        /// <summary>
-        /// Windows 10 and 11.
-        /// </summary>
-        Windows10and11 = 3,
-    }
 }

@@ -1,8 +1,6 @@
-﻿using Microsoft.GroupPolicy;
-
-namespace Gizmo.Client.Shared.Microsoft.GroupPolicy
+﻿namespace Microsoft.GroupPolicy
 {
-    public class MMCSharedFoldersExtPolicyAttribute : PolicyAttribute
+    public class MMCIndexingServicePolicyAttribute : PolicyAttribute
     {
         /// <summary>
         /// Creates new instance.
@@ -12,7 +10,7 @@ namespace Gizmo.Client.Shared.Microsoft.GroupPolicy
         /// <param name="enableValue">Enabled value.</param>
         /// <param name="disabledValue">Default value. -1 if it doesn't exist</param>
         /// <param name="targetOperatingSystem">targetOperatingSystem value</param>
-        public MMCSharedFoldersExtPolicyAttribute(string description, string valueName = "", int enableValue = 0, int disabledValue = -1, GroupPolicyTargetOperatingSystem targetOperatingSystem = GroupPolicyTargetOperatingSystem.Windows10and11) : base(@"SOFTWARE\Policies\Microsoft\MMC\{58221C69-EA27-11CF-ADCF-00AA00A80033}", description, valueName)
+        public MMCIndexingServicePolicyAttribute(string description, string valueName = "", int enableValue = 0, int disabledValue = -1, GroupPolicyTargetOperatingSystem targetOperatingSystem = GroupPolicyTargetOperatingSystem.Windows10and11) : base(@"SOFTWARE\Policies\Microsoft\MMC\{95AD72F0-44CE-11D0-AE29-00AA004B9986}", description, valueName)
         {
             Category = GroupPolicyGroup.MMC;
             TargetOperatingSystem = targetOperatingSystem;
