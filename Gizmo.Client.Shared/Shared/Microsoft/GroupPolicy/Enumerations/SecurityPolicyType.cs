@@ -15,6 +15,7 @@ namespace Microsoft.GroupPolicy
         /// Disable Collaboration Applications.
         /// </summary>
         [Obsolete()]
+        [Name("Disable Collaboration Applications", "")]
         [OldMessengerPolicy("Disable Collaboration Applications")]
         DisableCollaborationApps = 1,
 
@@ -22,6 +23,7 @@ namespace Microsoft.GroupPolicy
         /// Disable File Transfer.
         /// </summary>
         [Obsolete()]
+        [Name("Disable File Transfer", "")]
         [OldMessengerPolicy("Disable File Transfer")]
         DisableFileTransfer = 2,
 
@@ -29,6 +31,7 @@ namespace Microsoft.GroupPolicy
         /// Disable PC2PCAudio.
         /// </summary>
         [Obsolete()]
+        [Name("Disable PC2PCAudio", "")]
         [OldMessengerPolicy("Disable PC2PCAudio")]
         DisablePC2PCAudio = 3,
 
@@ -36,6 +39,7 @@ namespace Microsoft.GroupPolicy
         /// Disable PC2Phone.
         /// </summary>
         [Obsolete()]
+        [Name("Disable PC2Phone", "")]
         [OldMessengerPolicy("Disable PC2Phone")]
         DisablePC2Phone = 4,
 
@@ -43,6 +47,7 @@ namespace Microsoft.GroupPolicy
         /// Disable Video.
         /// </summary>
         [Obsolete()]
+        [Name("Disable Video", "")]
         [OldMessengerPolicy("Disable Video")]
         DisableVideo = 5,
 
@@ -50,6 +55,7 @@ namespace Microsoft.GroupPolicy
         /// Prevent Auto Update.
         /// </summary>
         [Obsolete()]
+        [Name("Prevent Auto Update", "")]
         [OldMessengerPolicy("Prevent Auto Update")]
         PreventAutoUpdate = 6,
 
@@ -57,6 +63,7 @@ namespace Microsoft.GroupPolicy
         /// Prevent Background Download.
         /// </summary>
         [Obsolete()]
+        [Name("Prevent Background Download", "")]
         [OldMessengerPolicy("Prevent Background Download")]
         PreventBackgroundDownload = 7,
 
@@ -64,6 +71,7 @@ namespace Microsoft.GroupPolicy
         /// Prevent Consumer Version.
         /// </summary>
         [Obsolete()]
+        [Name("Prevent Consumer Version", "")]
         [OldMessengerPolicy("Prevent Consumer Version")]
         PreventConsumerVersion = 8,
 
@@ -75,6 +83,7 @@ namespace Microsoft.GroupPolicy
         /// Disable the ability to change toolbar selection.
         /// </summary>
         [Obsolete()]
+        [Name("Disable the ability to change toolbar selection", "")]
         [OldInternetExplorerToolbarsPolicy("Disable the ability to change toolbar selection")]
         NoToolbarOptions = 9,
 
@@ -82,6 +91,7 @@ namespace Microsoft.GroupPolicy
         /// Disable the address bar.
         /// </summary>
         [Obsolete()]
+        [Name("Disable the address bar", "")]
         [OldInternetExplorerToolbarsPolicy("Disable the address bar")]
         NoAddressBar = 10,
 
@@ -89,6 +99,7 @@ namespace Microsoft.GroupPolicy
         /// Disable the tool bar.
         /// </summary>
         [Obsolete()]
+        [Name("Disable the tool bar", "")]
         [OldInternetExplorerToolbarsPolicy("Disable the tool bar")]
         NoToolBar = 11,
 
@@ -96,6 +107,7 @@ namespace Microsoft.GroupPolicy
         /// Disable the links bar.
         /// </summary>
         [Obsolete()]
+        [Name("Disable the links bar", "")]
         [OldInternetExplorerToolbarsPolicy("Disable the links bar")]
         NoLinksBar = 12,
 
@@ -107,6 +119,7 @@ namespace Microsoft.GroupPolicy
         /// Always prompt user when downloading files.
         /// </summary>
         [Obsolete()]
+        [Name("Always prompt user when downloading files", "")]
         [OldInternetExplorerPolicy("Always prompt user when downloading files")]
         AlwaysPromptWhenDownload = 13,
 
@@ -114,6 +127,7 @@ namespace Microsoft.GroupPolicy
         /// Disable changes to browsers bars.
         /// </summary>
         [Obsolete()]
+        [Name("Disable changes to browsers bars", "")]
         [OldInternetExplorerPolicy("Disable changes to browsers bars")]
         NoBrowserBars = 14,
 
@@ -121,6 +135,7 @@ namespace Microsoft.GroupPolicy
         /// Disable the option of closing Internet Explorer.
         /// </summary>
         [Obsolete()]
+        [Name("Disable the option of closing Internet Explorer", "")]
         [OldInternetExplorerPolicy("Disable the option of closing Internet Explorer")]
         NoBrowserClose = 15,
 
@@ -128,6 +143,7 @@ namespace Microsoft.GroupPolicy
         /// Disable right-click context menu.
         /// </summary>
         [Obsolete()]
+        [Name("Disable right-click context menu", "")]
         [OldInternetExplorerPolicy("Disable right-click context menu")]
         NoBrowserContextMenu = 16,
 
@@ -135,6 +151,7 @@ namespace Microsoft.GroupPolicy
         /// Disable the Tools > Internet Options menu.
         /// </summary>
         [Obsolete()]
+        [Name("Disable the Tools > Internet Options menu", "")]
         [OldInternetExplorerPolicy("Disable the Tools > Internet Options menu")]
         NoBrowserOptions = 17,
 
@@ -142,6 +159,7 @@ namespace Microsoft.GroupPolicy
         /// Disable the ability to Save As.
         /// </summary>
         [Obsolete()]
+        [Name("Disable the ability to Save As", "")]
         [OldInternetExplorerPolicy("Disable the ability to Save As")]
         NoBrowserSaveAs = 18,
 
@@ -149,6 +167,7 @@ namespace Microsoft.GroupPolicy
         /// Disable the Favorites.
         /// </summary>
         [Obsolete()]
+        [Name("Disable the Favorites", "")]
         [OldInternetExplorerPolicy("Disable the Favorites")]
         NoFavorites = 19,
 
@@ -156,6 +175,7 @@ namespace Microsoft.GroupPolicy
         /// Disable the File > New command.
         /// </summary>
         [Obsolete()]
+        [Name("Disable the File > New command", "")]
         [OldInternetExplorerPolicy("Disable the File > New command")]
         NoFileNew = 20,
 
@@ -163,6 +183,7 @@ namespace Microsoft.GroupPolicy
         /// Disable the File > Open command.
         /// </summary>
         [Obsolete()]
+        [Name("Disable the File > Open command", "")]
         [OldInternetExplorerPolicy("Disable the File > Open command")]
         NoFileOpen = 21,
 
@@ -170,6 +191,7 @@ namespace Microsoft.GroupPolicy
         /// Disable the Find Files command.
         /// </summary>
         [Obsolete()]
+        [Name("Disable the Find Files command", "")]
         [OldInternetExplorerPolicy("Disable the Find Files command")]
         NoFindFiles = 22,
 
@@ -177,6 +199,7 @@ namespace Microsoft.GroupPolicy
         /// Disables the Forward and Back navigation buttons.
         /// </summary>
         [Obsolete()]
+        [Name("Disables the Forward and Back navigation buttons", "")]
         [OldInternetExplorerPolicy("Disables the Forward and Back navigation buttons")]
         NoNavButtons = 23,
 
@@ -184,6 +207,7 @@ namespace Microsoft.GroupPolicy
         /// Disable Open in New Window option.
         /// </summary>
         [Obsolete()]
+        [Name("Disable Open in New Window option", "")]
         [OldInternetExplorerPolicy("Disable Open in New Window option")]
         NoOpeninNewWnd = 24,
 
@@ -191,6 +215,7 @@ namespace Microsoft.GroupPolicy
         /// Remove Print and Print Preview from the File menu.
         /// </summary>
         [Obsolete()]
+        [Name("Remove Print and Print Preview from the File menu", "")]
         [OldInternetExplorerPolicy("Remove Print and Print Preview from the File menu")]
         NoPrinting = 25,
 
@@ -198,6 +223,7 @@ namespace Microsoft.GroupPolicy
         /// Disable the option of selecting a download directory.
         /// </summary>
         [Obsolete()]
+        [Name("Disable the option of selecting a download directory", "")]
         [OldInternetExplorerPolicy("Disable the option of selecting a download directory")]
         NoSelectDownloadDir = 26,
 
@@ -205,6 +231,7 @@ namespace Microsoft.GroupPolicy
         /// Disable the Full Screen view option.
         /// </summary>
         [Obsolete()]
+        [Name("Disable the Full Screen view option", "")]
         [OldInternetExplorerPolicy("Disable the Full Screen view option")]
         NoTheaterMode = 27,
 
@@ -212,6 +239,7 @@ namespace Microsoft.GroupPolicy
         /// Disable the ability to view the page source HTML.
         /// </summary>
         [Obsolete()]
+        [Name("Disable the ability to view the page source HTML", "")]
         [OldInternetExplorerPolicy("Disable the ability to view the page source HTML")]
         NoViewSource = 28,
 
@@ -219,6 +247,7 @@ namespace Microsoft.GroupPolicy
         /// Remove Mail and News menu item.
         /// </summary>
         [Obsolete()]
+        [Name("Remove Mail and News menu item", "")]
         [OldInternetExplorerPolicy("Remove Mail and News menu item")]
         RestGoMenu = 29,
 
@@ -229,120 +258,144 @@ namespace Microsoft.GroupPolicy
         /// <summary>
         /// Remove folders button.
         /// </summary>
+        [Obsolete()]
+        [Name("Remove folders button", "")]
         [OldExplorerPolicy("Remove folders button", "Btn_Folders")]
         Btn_Folders = 30,
 
         /// <summary>
         /// Remove the Option to Change or Hide Toolbars
         /// </summary>
+        [Name("Remove the Option to Change or Hide Toolbars", " InternetExplorer_NoBandCustomize")]
         [OldExplorerPolicy("Remove the Option to Change or Hide Toolbars")]
         NoBandCustomize = 31,
 
         /// <summary>
         /// Disable Shut Down.
         /// </summary>
+        [Name("Remove and prevent access to the Shut Down, Restart, Sleep, and Hibernate commands", "StartMenu_NoShutdown_Restart_or_Sleep")]
         [OldExplorerPolicy("Disable Shut Down , Restart or Sleep")]
         NoClose = 32,
 
         /// <summary>
         /// Disable Desktop.
         /// </summary>
+        [Name("Hide and disable all items on the desktop", "Explorer_NoDesktop")]
         [OldExplorerPolicy("Disable Desktop")]
         NoDesktop = 33,
 
         /// <summary>
         /// Disable Removable Media autorun.
         /// </summary>
+        [Name("Disable Removable Media autorun", "Explorer_DriveAutorun")]
         [OldExplorerPolicy("Disable Removable Media autorun", "NoDriveAutoRun")]
         NoDriveAutoRun = 34,
 
         /// <summary>
         /// Hide Drives in My Computer.
         /// </summary>
+        [Name("Hide Drives in My Computer", "Explorer_HideDrivesInMyComputer")]
         [OldExplorerPolicy("Hide Drives in My Computer")]
         NoDrives = 35,
 
         /// <summary>
         /// Disable File Menu.
         /// </summary>
+        [Name("Remove File menu from File Explorer", "Explorer_RemoveFileMenu")]
         [OldExplorerPolicy("Disable File Menu")]
         NoFileMenu = 36,
 
         /// <summary>
         /// Disable File to Url.
         /// </summary>
+        [Obsolete()]
+        [Name("Disable File to Url", "InternetExplorer_NoFileUrl")]
         [OldExplorerPolicy("Disable File to Url")]
         NoFileUrl = 37,
 
         /// <summary>
         /// Disable search features.
         /// </summary>
+        [Obsolete()]
+        [Name("Remove Search link from Start Menu", "StartMenu_NoFind")]
         [OldExplorerPolicy("Disable search features")]
         NoFind = 38,
 
         /// <summary>
         /// Disable Folder Options Menu.
         /// </summary>
+        [Name("Disable Folder Options Menu", "Explorer_DisableFolderOptionsMenu")]
         [OldExplorerPolicy("Disable Folder Options Menu")]
         NoFolderOptions = 39,
 
         /// <summary>
         /// Remove the Map and Disconnect Network Drive Options.
         /// </summary>
+        [Name("Remove the Map and Disconnect Network Drive Options", "Exolorer_RemovetheMapandDisconnectNetworkDriveOptions")]
         [OldExplorerPolicy("Remove the Map and Disconnect Network Drive Options")]
         NoNetConnectDisconnect = 40,
 
         /// <summary>
         /// Disable Network Neighborhood.
         /// </summary>
+        [Name("Disable Network Neighborhood", "Explorer_DisableNetworkNeighborhood")]
         [OldExplorerPolicy("Disable Network Neighborhood")]
         NoNetHood = 41,
 
         /// <summary>
         /// Disable Run.
         /// </summary>
+        [Name("Remove Run menu from Start Menu", "StartMenu_DisableRun")]
         [OldExplorerPolicy("Disable Run")]
         NoRun = 42,
 
         /// <summary>
         /// Disable saving settings on exit.
         /// </summary>
+        [Name("Disable saving settings on exit", "Explorer_DisableSavingSettingsOnExit")]
         [OldExplorerPolicy("Disable saving settings on exit")]
         NoSaveSettings = 43,
 
         /// <summary>
         /// Disable the Ability to Customize Toolbars.
         /// </summary>
+        [Obsolete()]
+        [Name("Internet Explorer", "InternetExplorer_NoToolbarCustomize")]
         [OldExplorerPolicy("Disable the Ability to Customize Toolbars")]
         NoToolbarCustomize = 44,
 
         /// <summary>
         /// Remove shortcut menus from the desktop and from Windows Explorer.
         /// </summary>
+        [Name("Remove shortcut menus from the desktop and from Windows Explorer", "Exolorer_RemoveShortcutMenusFromTheDesktopAndFromWindowsExplorer")]
         [OldExplorerPolicy("Remove shortcut menus from the desktop and from Windows Explorer")]
         NoViewContextMenu = 45,
 
         /// <summary>
         /// Disable Log Off.
         /// </summary>
+        [Name("Disables or removes all menu items and buttons that log the user off the system.", "StartMenu_RemoveLogoff")]
         [OldExplorerPolicy("Disable Log Off", "NoLogOff")]
         DisableLogOff = 60,
 
         /// <summary>
         /// Disable tray contextual menu.
         /// </summary>
+        [Name("Disable tray contextual menu", "Explorer_DisableTrayContextualMenu")]
         [OldExplorerPolicy("Disable tray contextual menu", "NoTrayContextMenu")]
         NoTrayContextMenu = 62,
 
         /// <summary>
         /// Disable control panel (disables both old and new control panels).
         /// </summary>
+        [Name("Prohibit access to Control Panel and PC settings", "Explorer_DisableControlPanel")]
         [OldExplorerPolicy("Disable control panel (disables both old and new control panels)", "NoControlPanel")]
         NoExplorerControlPanel = 63,
 
         /// <summary>
         /// Remove logoff/sign out option from start menu.
         /// </summary>
+        [Name("Remove Logoff on the Start Menu", "Explorer_RemoveLogoffOnTheStartMenu")]
         [OldExplorerPolicy("Remove logoff/sign out option from start menu")]
         StartMenuLogOff = 64,
 
@@ -353,36 +406,42 @@ namespace Microsoft.GroupPolicy
         /// <summary>
         /// Disable the Change Password Button.
         /// </summary>
+        [Name("Remove Change Password", "System_RemoveChangePassword")]
         [OldSystemPolicy("Disable the Change Password Button")]
         DisableChangePassword = 47,
 
         /// <summary>
         /// Disable the Command Prompt.
         /// </summary>
+        [Name("Disable the Command Prompt", "System_DisableCMD")]
         [OldWindowsSystemPolicy("Disable the Command Prompt", "DisableCMD")]
         DisableCMD = 48,
 
         /// <summary>
         /// Disable Workstation Lock.
         /// </summary>
+        [Name("Disable Workstation Lock", "System_DisableWorkstationLock")]
         [OldSystemPolicy("Disable Workstation Lock")]
         DisableLockWorkstation = 49,
 
         /// <summary>
         /// Disable Registry Tools.
         /// </summary>
+        [Name("DisableRegistryTools", "System_DisableRegistryTools")]
         [OldSystemPolicy("Disable Registry Tools")]
         DisableRegistryTools = 50,
 
         /// <summary>
         /// Disable Task Manager.
         /// </summary>
+        [Name("Disable Task Manager", "System_DisableTaskManager")]
         [OldSystemPolicy("Disable Task Manager")]
         DisableTaskMgr = 59,
 
         /// <summary>
         /// Hide Fast User Switching.
         /// </summary>
+        [Name("HideFastUserSwitching", "System_HideFastUserSwitching")]
         [OldSystemPolicy("Hide Fast User Switching", Win32.RegistryHive.LocalMachine)]
         HideFastUserSwitching = 61,
 
@@ -393,6 +452,8 @@ namespace Microsoft.GroupPolicy
         /// <summary>
         /// Hide Entire Network in Network Neighborhood.
         /// </summary>
+        [Obsolete()]
+        [Name("Hide Entire Network in Network Neighborhood", "Network_HideEntireNetworkInNetworkNeighborhood")]
         [OldNetworkPolicy("Hide Entire Network in Network Neighborhood")]
         NoEntireNetwork = 51,
 
@@ -403,18 +464,21 @@ namespace Microsoft.GroupPolicy
         /// <summary>
         /// Remove back button.
         /// </summary>
+        [Name("Hide the common dialog back button", "CommonDialog_HideTheCommonDialogBackButton")]
         [OldCommonDialogPolicy("Remove back button")]
         NoBackButton = 52,
 
         /// <summary>
         /// Hide most recently used files.
         /// </summary>
+        [Name("Hide the dropdown list of recent files", "CommonDialog_HideTheDropdownListOfRecentFiles")]
         [OldCommonDialogPolicy("Hide most recently used files")]
         NoFileMRU = 53,
 
         /// <summary>
         /// Hide places bar.
         /// </summary>
+        [Name("Hide the common dialog places bar", "CommonDialog_HideTheCommonDialogPlacesBar")]
         [OldCommonDialogPolicy("Hide places bar")]
         NoPlacesBar = 54,
 
@@ -425,18 +489,21 @@ namespace Microsoft.GroupPolicy
         /// <summary>
         /// Hide My Computer.
         /// </summary>
+        [Name("Remove Computer icon on the desktop", "NOENUM_RemoveComputerIconOnTheDesktop")]
         [NonEnumPolicyAttribute("Hide My Computer", "{20D04FE0-3AEA-1069-A2D8-08002B30309D}")]
         NoMyComputer = 55,
 
         /// <summary>
-        /// Hide Network Places.
+        /// Hide Network Places. Hide by GUI?
         /// </summary>
+        [Name("Hide Network Places", "NOENUM_HideNetworkPlaces")]
         [NonEnumPolicyAttribute("Hide Network Places", "{20D04FE0-3AEA-1069-A2D7-08002B30309D}")]
         NoNetworkPlaces = 56,
 
         /// <summary>
-        /// Hide Control Panel.
+        /// Hide Control Panel. Hide by GUI?
         /// </summary>
+        [Name("Hide Control Panel", "NOENUM_HideControlPanel")]
         [NonEnumPolicyAttribute("Hide Control Panel", "{21EC2020-3AEA-1069-A2DD-08002B30309D}")]
         NoControlPanel = 57,
 
@@ -447,6 +514,7 @@ namespace Microsoft.GroupPolicy
         /// <summary>
         /// Disable USB Mass Storage.
         /// </summary>
+        [Name("Disable USB Mass Storage", "Explorer_DisableUSBMassStorage")]
         [OldUsbStorPolicy("Disable USB Mass Storage", "Start")]
         UsbStorage = 58,
 
@@ -457,6 +525,8 @@ namespace Microsoft.GroupPolicy
         /// <summary>
         /// Disable Add/Remove Programs (Windows XP Only).
         /// </summary>
+        [Obsolete()]
+        [Name("Disable Add/Remove Programs (Windows XP Only)", "DisableAdd/RemovePrograms")]
         [OldUninstallPolicy("Disable Add/Remove Programs (Windows XP Only)")]
         NoAddRemovePrograms = 46,
 
@@ -467,6 +537,7 @@ namespace Microsoft.GroupPolicy
         /// <summary>
         /// Disable Chrome downloads.
         /// </summary>
+        [Name("Disable Chrome downloads", "Chrome_DisableDownloads")]
         [OldChromePolicy("Disable Chrome downloads", "DownloadRestrictions")]
         ChromeNoDownload = 65,
 
@@ -1815,7 +1886,7 @@ namespace Microsoft.GroupPolicy
         CurUserExplorerRestrictCplPolicy_mmsys = 385,
 
         [Name("Explorer WAU Disabled", "ExplorerWAU_Disabled")]
-        [CurUserExplorerPolicy("WAU", "Disabled")]
+        [CurUserExplorerWAUPolicy("WAU", "Disabled")]
         CurUserExplorer_WAUDisabled = 386,
 
 
@@ -1989,7 +2060,7 @@ namespace Microsoft.GroupPolicy
         #region Windows
 
         [Name("Windows TurnOffWinCal", "CurUserWindows_TurnOffWinCal")]
-        [CurUserSystemPolicy("Turn Off WinCal", "TurnOffWinCal", 1)]
+        [CurUserWindowsPolicyAttribute("Turn Off WinCal", "TurnOffWinCal", 1)]
         CurUserWindows_TurnOffWinCal = 425,
 
         [Name("Windows Prevent Run", "CurUserWindows_PreventRun")]

@@ -10,7 +10,8 @@
         /// <param name="enableValue">Enabled value.</param>
         /// <param name="disabledValue">Default value. -1 if it doesn't exist</param>
         /// <param name="targetOperatingSystem">targetOperatingSystem value</param>
-        public MMCDCOMConfigurationExtensionPolicyAttribute(string description, string valueName = "", int enableValue = 0, int disabledValue = -1, GroupPolicyTargetOperatingSystem targetOperatingSystem = GroupPolicyTargetOperatingSystem.Windows10and11) : base(@"SOFTWARE\Policies\Microsoft\MMC\{9EC88934-C774-11d1-87F4-00C04FC2C17B}", description, valueName)
+        public MMCDCOMConfigurationExtensionPolicyAttribute(string description, string valueName = "", int enableValue = 0, int disabledValue = -1, GroupPolicyTargetOperatingSystem targetOperatingSystem = GroupPolicyTargetOperatingSystem.Windows10and11) 
+            : base(@"SOFTWARE\Policies\Microsoft\MMC\{9EC88934-C774-11d1-87F4-00C04FC2C17B}", description, valueName)
         {
             Category = GroupPolicyGroup.MMC;
             TargetOperatingSystem = targetOperatingSystem;

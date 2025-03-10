@@ -10,7 +10,8 @@
         /// <param name="enableValue">Enabled value.</param>
         /// <param name="disabledValue">Default value. -1 if it doesn't exist</param>
         /// <param name="targetOperatingSystem">targetOperatingSystem value</param>
-        public MMCLinktoWebAddressPolicyAttribute(string description, string valueName = "", int enableValue = 0, int disabledValue = -1, GroupPolicyTargetOperatingSystem targetOperatingSystem = GroupPolicyTargetOperatingSystem.Windows10and11) : base(@"SOFTWARE\Policies\Microsoft\MMC\{C96401D1-0E17-11D3-885B-00C04F72C717}", description, valueName)
+        public MMCLinktoWebAddressPolicyAttribute(string description, string valueName = "", int enableValue = 0, int disabledValue = -1, GroupPolicyTargetOperatingSystem targetOperatingSystem = GroupPolicyTargetOperatingSystem.Windows10and11) 
+            : base(@"SOFTWARE\Policies\Microsoft\MMC\{C96401D1-0E17-11D3-885B-00C04F72C717}", description, valueName)
         {
             Category = GroupPolicyGroup.MMC;
             TargetOperatingSystem = targetOperatingSystem;

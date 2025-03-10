@@ -10,7 +10,8 @@
         /// <param name="enableValue">Enabled value.</param>
         /// <param name="disabledValue">Default value. -1 if it doesn't exist</param>
         /// <param name="targetOperatingSystem">targetOperatingSystem value</param>
-        public MMCQoSAdmissionControlPolicyAttribute(string description, string valueName = "", int enableValue = 0, int disabledValue = -1, GroupPolicyTargetOperatingSystem targetOperatingSystem = GroupPolicyTargetOperatingSystem.Windows10and11) : base(@"SOFTWARE\Policies\Microsoft\MMC\{FD57D297-4FD9-11D1-854E-00C04FC31FD3}", description, valueName)
+        public MMCQoSAdmissionControlPolicyAttribute(string description, string valueName = "", int enableValue = 0, int disabledValue = -1, GroupPolicyTargetOperatingSystem targetOperatingSystem = GroupPolicyTargetOperatingSystem.Windows10and11) 
+            : base(@"SOFTWARE\Policies\Microsoft\MMC\{FD57D297-4FD9-11D1-854E-00C04FC31FD3}", description, valueName)
         {
             Category = GroupPolicyGroup.MMC;
             TargetOperatingSystem = targetOperatingSystem;

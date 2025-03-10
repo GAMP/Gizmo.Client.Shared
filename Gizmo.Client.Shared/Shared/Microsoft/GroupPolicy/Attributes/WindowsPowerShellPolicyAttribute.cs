@@ -29,7 +29,8 @@
         /// <param name="enableValue">Enabled value.</param>
         /// <param name="disabledValue">Default value. Empty or "PolicyValueDeleteResult" if it doesn't exist</param>
         /// <param name="targetOperatingSystem">targetOperatingSystem value</param>
-        public WindowsPowerShellPolicyAttribute(string description, string valueName, string enableValue, string disabledValue = "PolicyValueDeleteResult", GroupPolicyTargetOperatingSystem targetOperatingSystem = GroupPolicyTargetOperatingSystem.Windows10and11) : base(@"SOFTWARE\policies\microsoft\windows\powershell", description, valueName)
+        public WindowsPowerShellPolicyAttribute(string description, string valueName, string enableValue, string disabledValue = "PolicyValueDeleteResult", GroupPolicyTargetOperatingSystem targetOperatingSystem = GroupPolicyTargetOperatingSystem.Windows10and11) 
+            : base(@"SOFTWARE\policies\microsoft\windows\powershell", description, valueName)
         {
             Category = GroupPolicyGroup.Windows;
             TargetOperatingSystem = targetOperatingSystem;

@@ -28,7 +28,8 @@
         /// <param name="enableValue">Enabled value.</param>
         /// <param name="disabledValue">Default value. Empty or "PolicyValueDeleteResult" if it doesn't exist</param>
         /// <param name="targetOperatingSystem">targetOperatingSystem value</param>
-        public ProtectedEventLoggingPolicyAttribute(string description, string valueName, string enableValue, string disabledValue = "PolicyValueDeleteResult", GroupPolicyTargetOperatingSystem targetOperatingSystem = GroupPolicyTargetOperatingSystem.Windows10and11) : base(@"SOFTWARE\policies\microsoft\windows\eventlog\protectedeventlogging", description, valueName)
+        public ProtectedEventLoggingPolicyAttribute(string description, string valueName, string enableValue, string disabledValue = "PolicyValueDeleteResult", GroupPolicyTargetOperatingSystem targetOperatingSystem = GroupPolicyTargetOperatingSystem.Windows10and11) 
+            : base(@"SOFTWARE\policies\microsoft\windows\eventlog\protectedeventlogging", description, valueName)
         {
             Category = GroupPolicyGroup.Miscellaneous;
             TargetOperatingSystem = targetOperatingSystem;
