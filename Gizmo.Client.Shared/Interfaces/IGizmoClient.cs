@@ -58,6 +58,14 @@ namespace Gizmo.Client
         /// </summary>
         public bool IsUserLoggedIn { get; }
 
+        /// <summary>
+        /// Indicates that client UI is in full screen mode.
+        /// </summary>
+        /// <remarks>
+        /// By default when no user is logged in the client will be in full screen mode, in such case this property will not reflect the actual state.
+        /// </remarks>
+        public bool IsFullScreen { get; }
+
         #endregion
 
         #region EVENTS
