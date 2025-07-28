@@ -58,6 +58,14 @@ namespace Gizmo.Client
         /// </summary>
         public bool IsUserLoggedIn { get; }
 
+        /// <summary>
+        /// Indicates that client UI is in full screen mode.
+        /// </summary>
+        /// <remarks>
+        /// By default when no user is logged in the client will be in full screen mode, in such case this property will not reflect the actual state.
+        /// </remarks>
+        public bool IsFullScreen { get; }
+
         #endregion
 
         #region EVENTS
@@ -742,7 +750,7 @@ namespace Gizmo.Client
         /// This function does not throw any exceptions and any errors are logged instead.
         /// </remarks>
         /// <returns>Enter result.</returns>
-        Task<FullScreenEnterResult> EnterFullSceenAsync(FullScreenEnterOptions? enterOptions = default, CancellationToken cancellationToken = default);
+        Task<FullScreenEnterResult> EnterFullScreenAsync(FullScreenEnterOptions? enterOptions = default, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Attempts to exit full screen mode.
@@ -753,7 +761,7 @@ namespace Gizmo.Client
         /// This function does not throw any exceptions and any errors are logged instead.
         /// </remarks>
         /// <returns>Exit result.</returns>
-        Task<FullScreenExitResult> ExitFullSceenAsync(FullScreenExitOptions? exitOptions = default, CancellationToken cancellationToken = default);
+        Task<FullScreenExitResult> ExitFullScreenAsync(FullScreenExitOptions? exitOptions = default, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Notifies user of app exe failed launch.
