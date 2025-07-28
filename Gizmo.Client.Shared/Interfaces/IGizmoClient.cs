@@ -750,7 +750,7 @@ namespace Gizmo.Client
         /// This function does not throw any exceptions and any errors are logged instead.
         /// </remarks>
         /// <returns>Enter result.</returns>
-        Task<FullScreenEnterResult> EnterFullSceenAsync(FullScreenEnterOptions? enterOptions = default, CancellationToken cancellationToken = default);
+        Task<FullScreenEnterResult> EnterFullScreenAsync(FullScreenEnterOptions? enterOptions = default, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Attempts to exit full screen mode.
@@ -761,7 +761,7 @@ namespace Gizmo.Client
         /// This function does not throw any exceptions and any errors are logged instead.
         /// </remarks>
         /// <returns>Exit result.</returns>
-        Task<FullScreenExitResult> ExitFullSceenAsync(FullScreenExitOptions? exitOptions = default, CancellationToken cancellationToken = default);
+        Task<FullScreenExitResult> ExitFullScreenAsync(FullScreenExitOptions? exitOptions = default, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Notifies user of app exe failed launch.
