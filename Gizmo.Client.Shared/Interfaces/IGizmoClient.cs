@@ -835,5 +835,12 @@ namespace Gizmo.Client
         public Task<bool> AssistanceRequestAnyPendingGetAsync(CancellationToken cancellationToken = default);
 
         public Task<UpdateResult> AssistanceRequestPendingCancelAsync(CancellationToken cancellationToken = default);
+        
+        /// <summary>
+        /// Get custom pages
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token</param>
+        /// <returns>List of <see cref="CustomPageModel"/></returns>
+        public Task<List<CustomPageModel>> CustomPagesGetAsync(CancellationToken cancellationToken = default);
     }
 }
