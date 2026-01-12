@@ -1,5 +1,6 @@
 ﻿#nullable enable
 
+using Gizmo.Client.Options;
 using Gizmo.Client.UI;
 using Gizmo.Web.Api.Messaging;
 using Gizmo.Web.Api.Models;
