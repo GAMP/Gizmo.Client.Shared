@@ -16,7 +16,7 @@
         public bool IsAlive { get; }
 
         /// <summary>
-        /// Gets if execution is in progress.<br></br>Esentially if the application being started.
+        /// Gets if execution is in progress.<br></br>Essentially if the application being started.
         /// </summary>
         bool IsExecuting
         {
@@ -24,7 +24,7 @@
         }
 
         /// <summary>
-        /// Gets if execution is being aborted.<br></br>Esentially if application start is being canceled.
+        /// Gets if execution is being aborted.<br></br>Essentially if application start is being canceled.
         /// </summary>
         bool IsAborting
         {
@@ -32,7 +32,7 @@
         }
 
         /// <summary>
-        /// Gets if execution where previously completed with succcess.<br></br>Esentially if application was started normally at least once.
+        /// Gets if execution where previously completed with success.<br></br>Essentially if application was started normally at least once.
         /// </summary>
         bool HasCompleted { get; }
 
