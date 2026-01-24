@@ -1,5 +1,8 @@
 ﻿namespace Gizmo.Client
 {
+    /// <summary>
+    /// Executing context deployment sync contract.
+    /// </summary>
     public interface IAppExecutionContextSyncInfo
     {
         /// <summary>

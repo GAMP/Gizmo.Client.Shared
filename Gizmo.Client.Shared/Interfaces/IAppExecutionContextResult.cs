@@ -9,7 +9,7 @@
 
         /// <summary>
         /// Gets execution context.<br></br>
-        /// <b>The vaule will be null if <seealso cref="IsSuccess"/> is equal to false.</b>
+        /// <b>The value will be null if <seealso cref="IsSuccess"/> is equal to false.</b>
         /// </summary>
         public IAppExeExecutionContext? ExecutionContext { get; }
     }

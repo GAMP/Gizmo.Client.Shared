@@ -304,7 +304,7 @@ namespace Gizmo.Client
         /// <param name="userAgreementId">User agreement id.</param>
         /// <param name="state">State.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<UpdateResult> UserAgreementStateSetAsync(int userAgreementId, Gizmo.UserAgreementAcceptState state, CancellationToken cancellationToken = default);
+        public Task<UpdateResult> UserAgreementStateSetAsync(int userAgreementId, UserAgreementAcceptState state, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Checks if specified user email exist.
