@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Gizmo.Web.Api.Models;
 
 namespace Gizmo.Client
 {
