@@ -349,7 +349,7 @@ namespace Gizmo.Client
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Required info, the value will be null if no default user group exist.</returns>
         public Task<UserModelRequiredInfo?> UserGroupDefaultRequiredInfoGetAsync(CancellationToken cancellationToken = default);
-        
+
         /// <summary>
         /// Gets required user info for current user group.
         /// </summary>
@@ -820,18 +820,56 @@ namespace Gizmo.Client
         /// <param name="cancellationToken">Cancellation token.</param>
         Task ExecutionContextKillNonLimitedAsync(CancellationToken cancellationToken = default);
 
-        public Task<List<UserUsageTimeLevelModel>> UserUsageTimeLevelsGetAsync(CancellationToken cToken);
+        /// <summary>
+        /// Gets users usage time levels.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns></returns>
+        public Task<List<UserUsageTimeLevelModel>> UserUsageTimeLevelsGetAsync(CancellationToken cancellationToken = default);
 
-        public Task<UserCreditLimitModel> UserCreditLimitGetAsync(CancellationToken cToken = default);
-        
+        /// <summary>
+        /// Gets user credit limit.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns></returns>
+        public Task<UserCreditLimitModel> UserCreditLimitGetAsync(CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Gets assistance request types.
+        /// </summary>
+        /// <param name="filter">Filter.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Assistance request types.</returns>
         public Task<PagedList<AssistanceRequestTypeModel>> AssistanceRequestTypesGetAsync(AssistanceRequestTypeFilter filter, CancellationToken cancellationToken = default);
 
+        /// <summary>
+        /// Gets assistance request type by id.
+        /// </summary>
+        /// <param name="id">Assistance request type id.</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns>Assistance request type.</returns>
         public Task<AssistanceRequestTypeModel?> AssistanceRequestTypeGetAsync(int id, CancellationToken cancellationToken = default);
 
+        /// <summary>
+        /// Crates assistance request.
+        /// </summary>
+        /// <param name="assistanceRequestModelUserCreate">Model.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Create result.</returns>
         public Task<CreateResult> AssistanceRequestCreateAsync(AssistanceRequestModelUserCreate assistanceRequestModelUserCreate, CancellationToken cancellationToken = default);
 
+        /// <summary>
+        /// Checks if any assistance request are currently pending for the current user.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>True or false.</returns>
         public Task<bool> AssistanceRequestAnyPendingGetAsync(CancellationToken cancellationToken = default);
 
+        /// <summary>
+        /// Cancels any pending assistance request for current user.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Update result.</returns>
         public Task<UpdateResult> AssistanceRequestPendingCancelAsync(CancellationToken cancellationToken = default);
     }
 }
