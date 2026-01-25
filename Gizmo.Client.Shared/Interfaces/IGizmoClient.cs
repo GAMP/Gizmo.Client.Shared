@@ -372,7 +372,7 @@ namespace Gizmo.Client
         /// <param name="confirmationCodeDeliveryMethod">Confirmation code delivery method.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Creation result.</returns>
-        public Task<AccountCreationResultModelByMobilePhone> UserCreateByMobileStartAsync(string mobilePhone, Gizmo.ConfirmationCodeDeliveryMethod confirmationCodeDeliveryMethod = Gizmo.ConfirmationCodeDeliveryMethod.Undetermined, CancellationToken cancellationToken = default);
+        public Task<AccountCreationResultModelByMobilePhone> UserCreateByMobileStartAsync(string mobilePhone, Gizmo.Web.Api.Models.ConfirmationCodeDeliveryMethod confirmationCodeDeliveryMethod = Gizmo.Web.Api.Models.ConfirmationCodeDeliveryMethod.Undetermined, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Completes user creation.
@@ -410,7 +410,7 @@ namespace Gizmo.Client
         /// <param name="confirmationCodeDeliveryMethod">Confirmation code delivery method.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Recovery procedure result.</returns>
-        public Task<PasswordRecoveryStartResultModelByMobile> UserPasswordRecoveryByMobileStartAsync(string mobilePhone, Gizmo.ConfirmationCodeDeliveryMethod confirmationCodeDeliveryMethod = Gizmo.ConfirmationCodeDeliveryMethod.Undetermined, CancellationToken cancellationToken = default);
+        public Task<PasswordRecoveryStartResultModelByMobile> UserPasswordRecoveryByMobileStartAsync(string mobilePhone, Gizmo.Web.Api.Models.ConfirmationCodeDeliveryMethod confirmationCodeDeliveryMethod = Gizmo.Web.Api.Models.ConfirmationCodeDeliveryMethod.Undetermined, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Initiates user password recovery by email address.
@@ -635,14 +635,14 @@ namespace Gizmo.Client
         /// Returns the registration verification method.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<RegistrationVerificationMethod> RegistrationVerificationMethodGetAsync(CancellationToken cancellationToken = default);
+        public Task<Gizmo.Server.RegistrationVerificationMethod> RegistrationVerificationMethodGetAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns the password recovery method.
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public Task<UserRecoveryMethod> PasswordRecoveryMethodGetAsync(CancellationToken cancellationToken = default);
+        public Task<Gizmo.Server.UserRecoveryMethod> PasswordRecoveryMethodGetAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns the list of user popular applications.
