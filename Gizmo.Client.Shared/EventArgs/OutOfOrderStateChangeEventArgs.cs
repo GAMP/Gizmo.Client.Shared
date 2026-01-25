@@ -5,13 +5,13 @@ namespace Gizmo.Client
     /// <summary>
     /// Out of order state change event args.
     /// </summary>
-    public sealed class OutOfOrderStateEventArgs : EventArgs
+    public sealed class OutOfOrderStateChangeEventArgs : EventArgs
     {
         /// <summary>
         /// Creates new instance.
         /// </summary>
         /// <param name="newState">New state.</param>
-        public OutOfOrderStateEventArgs(bool newState)
+        public OutOfOrderStateChangeEventArgs(bool newState)
         {
             IsOutOfOrder = newState;
         }

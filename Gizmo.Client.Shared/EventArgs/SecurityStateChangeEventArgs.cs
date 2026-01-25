@@ -1,18 +1,16 @@
-﻿using System;
-
-namespace Gizmo.Client
+﻿namespace Gizmo.Client
 {
     /// <summary>
     /// Security state change event args.
     /// </summary>
-    public sealed class SecurityStateArgs : EventArgs
+    public sealed class SecurityStateChangeEventArgs : EventArgs
     {
         /// <summary>
         /// Creates new instance.
         /// </summary>
         /// <param name="isEnabled">Indicates if enabled.</param>
         /// <param name="wasEnabled">Indicates if was enabled.</param>
-        public SecurityStateArgs(bool isEnabled, bool wasEnabled)
+        public SecurityStateChangeEventArgs(bool isEnabled, bool wasEnabled)
         {
             IsEnabled = isEnabled;
             WasEnabled = wasEnabled;
@@ -24,7 +22,7 @@ namespace Gizmo.Client
         /// <param name="isEnabled">Indicates if enabled.</param>
         /// <param name="wasEnabled">Indicates if was enabled.</param>
         /// <param name="activeProfile">Indicates if caused by active security profile.</param>
-        public SecurityStateArgs(bool isEnabled, bool wasEnabled, bool activeProfile = false) : this(isEnabled, wasEnabled)
+        public SecurityStateChangeEventArgs(bool isEnabled, bool wasEnabled, bool activeProfile = false) : this(isEnabled, wasEnabled)
         {
             ActiveProfileChanged = activeProfile;
         }

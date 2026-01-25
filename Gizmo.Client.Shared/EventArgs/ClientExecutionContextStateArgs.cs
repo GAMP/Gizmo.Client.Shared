@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Gizmo.Client
+﻿namespace Gizmo.Client
 {
     /// <summary>
     /// Client execution context event args.
@@ -28,7 +26,7 @@ namespace Gizmo.Client
         /// <param name="stateObject">Custom state object.</param>
         public ClientExecutionContextStateArgs(int exeId, ContextExecutionState newState,
             ContextExecutionState oldState,
-            object stateObject)
+            object? stateObject)
         {
             ExecutableId = exeId;
             NewState = newState;
@@ -48,7 +46,7 @@ namespace Gizmo.Client
         /// <summary>
         /// Gets the instance of the state object.
         /// </summary>
-        public object StateObject
+        public object? StateObject
         {
             get;
             init;

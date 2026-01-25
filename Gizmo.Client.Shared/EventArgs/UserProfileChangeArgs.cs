@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Gizmo.Client
+﻿namespace Gizmo.Client
 {
     /// <summary>
     /// User profile change event args.

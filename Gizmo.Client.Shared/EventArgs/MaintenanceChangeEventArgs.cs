@@ -1,17 +1,15 @@
-﻿using System;
-
-namespace Gizmo.Client
+﻿namespace Gizmo.Client
 {
     /// <summary>
     /// Maintenance mode change event args.
     /// </summary>
-    public sealed class MaintenanceEventArgs : EventArgs
+    public sealed class MaintenanceChangeEventArgs : EventArgs
     {
         /// <summary>
         /// Creates new instance.
         /// </summary>
         /// <param name="enabled">Indicates if maintenance mode is enabled.</param>
-        public MaintenanceEventArgs(bool enabled)
+        public MaintenanceChangeEventArgs(bool enabled)
         {
             IsEnabled = enabled;
         }

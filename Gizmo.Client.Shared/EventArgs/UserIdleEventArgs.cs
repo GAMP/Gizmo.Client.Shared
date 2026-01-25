@@ -1,14 +1,10 @@
-﻿using System;
-
-namespace Gizmo.Client
+﻿namespace Gizmo.Client
 {
     /// <summary>
     /// User idle event args.
     /// </summary>
     public sealed class UserIdleEventArgs : EventArgs
     {
-        #region CONSTRUCTOR
-
         /// <summary>
         /// Creates new instance.
         /// </summary>
@@ -17,9 +13,6 @@ namespace Gizmo.Client
         {
             IsIdle = isIdle;
         }
-        #endregion
-
-        #region PROPERTIES
 
         /// <summary>
         /// Gets if the user is idle.
@@ -29,7 +22,5 @@ namespace Gizmo.Client
             get;
             init;
         }
-        
-        #endregion
-    } 
+    }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Gizmo.Client
+﻿namespace Gizmo.Client
 {
     /// <summary>
     /// Client shutdown event args.
@@ -28,7 +26,7 @@ namespace Gizmo.Client
         }
 
         /// <summary>
-        /// Gets if application is sutting down due to a crash.
+        /// Gets if application is shutting down due to a crash.
         /// </summary>
         public bool IsCrashed
         {

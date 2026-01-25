@@ -1,12 +1,13 @@
-﻿using System;
-
-namespace Gizmo.Client
+﻿namespace Gizmo.Client
 {
     /// <summary>
     /// Client user lock change args.
     /// </summary>
-    public sealed class UserLockChangeEventArgs : EventArgs
+    public sealed class UserLockStateChangeEventArgs : EventArgs
     {
+        /// <summary>
+        /// Current lock status.
+        /// </summary>
         public bool IsLocked
         {
             get;

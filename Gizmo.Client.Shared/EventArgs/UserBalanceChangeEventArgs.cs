@@ -1,18 +1,16 @@
-﻿using System;
-
-namespace Gizmo.Client
+﻿namespace Gizmo.Client
 {
     /// <summary>
     /// User balance change event args.
     /// </summary>
-    public sealed class UserBalanceEventArgs : EventArgs
+    public sealed class UserBalanceChangeEventArgs : EventArgs
     {
         /// <summary>
         /// Creates new instance.
         /// </summary>
         /// <param name="userId">User id.</param>
         /// <param name="balance">User balance.</param>
-        public UserBalanceEventArgs(int userId, IUserBalance balance)
+        public UserBalanceChangeEventArgs(int userId, IUserBalance balance)
         {
             UserId = userId;
             Balance = balance ?? throw new ArgumentNullException(nameof(balance));

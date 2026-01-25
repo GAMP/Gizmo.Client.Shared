@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace Gizmo.Client
+﻿namespace Gizmo.Client
 {
     /// <summary>
     /// Client id change event args.
     /// </summary>
     /// <remarks>
-    /// Client id represents client number.
+    /// <b>Client id represents client number.</b>
     /// </remarks>
     public sealed class IdChangeEventArgs : EventArgs
     {

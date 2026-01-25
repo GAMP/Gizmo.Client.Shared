@@ -81,7 +81,7 @@ namespace Gizmo.Client
         /// <summary>
         /// Raised when current user balance changes.
         /// </summary>
-        event EventHandler<UserBalanceEventArgs>? UserBalanceChange;
+        event EventHandler<UserBalanceChangeEventArgs>? UserBalanceChange;
 
         /// <summary>
         /// Raised when system user becomes idle.
@@ -141,7 +141,7 @@ namespace Gizmo.Client
         /// <summary>
         /// Raised when input lock state changes.
         /// </summary>
-        event EventHandler<LockStateEventArgs> LockStateChange;
+        event EventHandler<LockStateChangeEventArgs> LockStateChange;
 
         /// <summary>
         /// Raised when grace period changes.
@@ -151,7 +151,7 @@ namespace Gizmo.Client
         /// <summary>
         /// Raised when out of order state changes.
         /// </summary>
-        event EventHandler<OutOfOrderStateEventArgs> OutOfOrderStateChange;
+        event EventHandler<OutOfOrderStateChangeEventArgs> OutOfOrderStateChange;
 
         /// <summary>
         /// Raised when host reservation changes.

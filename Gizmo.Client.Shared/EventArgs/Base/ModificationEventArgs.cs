@@ -12,5 +12,6 @@ public abstract class ModificationEventArgs : EventArgs
     }
 
     public int EntityId { get; init; }
+
     public ModificationType ModificationType { get; init; }
 }

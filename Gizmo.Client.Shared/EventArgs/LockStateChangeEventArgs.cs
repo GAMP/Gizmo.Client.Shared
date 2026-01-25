@@ -1,17 +1,15 @@
-﻿using System;
-
-namespace Gizmo.Client
+﻿namespace Gizmo.Client
 {
     /// <summary>
     /// Lock state change event args.
     /// </summary>
-    public sealed class LockStateEventArgs : EventArgs
+    public sealed class LockStateChangeEventArgs : EventArgs
     {
         /// <summary>
         /// Creates new instance.
         /// </summary>
         /// <param name="isLocked">Indicates if locked.</param>
-        public LockStateEventArgs(bool isLocked)
+        public LockStateChangeEventArgs(bool isLocked)
         {
             IsLocked = isLocked;
         }
