@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Gizmo.Client
+﻿namespace Gizmo.Client
 {
     /// <summary>
     /// User login state change event args.
@@ -18,7 +16,7 @@ namespace Gizmo.Client
         public UserLoginStateChangeEventArgs(Gizmo.IUserProfile profile,
             LoginState state,
             LoginState oldState = LoginState.LoggedOut,
-            LoginResult failReason = LoginResult.Sucess,
+            Web.Api.Models.LoginResult failReason = Web.Api.Models.LoginResult.Success,
             UserInfoTypes requiredInfo = UserInfoTypes.None)
         {
             UserProfile = profile;
@@ -58,10 +56,10 @@ namespace Gizmo.Client
         /// <summary>
         /// Gets the failure reason.
         /// <remarks>
-        /// This value is only set if error occurred otherwise equals to Sucess.
+        /// This value is only set if error occurred otherwise equals to success.
         /// </remarks>
         /// </summary>
-        public LoginResult FailReason
+        public Web.Api.Models.LoginResult FailReason
         {
             get;
             init;
@@ -80,7 +78,7 @@ namespace Gizmo.Client
         }
 
         /// <summary>
-        /// Gets if user info input rquired for user.
+        /// Gets if user info input required for user.
         /// <remarks>
         /// This property will return false if only password input required.
         /// </remarks>
@@ -94,7 +92,7 @@ namespace Gizmo.Client
         }
 
         /// <summary>
-        /// Gets if user password input requried for user.
+        /// Gets if user password input required for user.
         /// </summary>
         public bool IsUserPasswordRequired
         {
