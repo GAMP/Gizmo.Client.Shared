@@ -17,7 +17,7 @@
             LoginState state,
             LoginState oldState = LoginState.LoggedOut,
             Web.Api.Models.LoginResult failReason = Web.Api.Models.LoginResult.Success,
-            UserInfoTypes requiredInfo = UserInfoTypes.None)
+            Web.Api.Models.UserInfoTypes requiredInfo = Web.Api.Models.UserInfoTypes.None)
         {
             UserProfile = profile;
             State = state;
@@ -71,7 +71,7 @@
         /// This property is only set when State property equals to LoggedIn.
         /// </remarks>
         /// </summary>
-        public UserInfoTypes RequiredUserInformation
+        public Web.Api.Models.UserInfoTypes RequiredUserInformation
         {
             get;
             init;
@@ -87,7 +87,7 @@
         {
             get
             {
-                return !(RequiredUserInformation == UserInfoTypes.None) & !(RequiredUserInformation == UserInfoTypes.Password);
+                return !(RequiredUserInformation == Web.Api.Models.UserInfoTypes.None) & !(RequiredUserInformation == Web.Api.Models.UserInfoTypes.Password);
             }
         }
 
@@ -98,7 +98,7 @@
         {
             get
             {
-                return (RequiredUserInformation & UserInfoTypes.Password) == UserInfoTypes.Password;
+                return (RequiredUserInformation & Web.Api.Models.UserInfoTypes.Password) == Web.Api.Models.UserInfoTypes.Password;
             }
         }
     }
