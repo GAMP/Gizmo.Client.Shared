@@ -13,7 +13,7 @@ namespace Gizmo.Client
         /// <param name="userId">User id.</param>
         /// <param name="usageType">Current usage type.</param>
         /// <param name="timeProduct">Current time product name.</param>
-        public UsageSessionChangeEventArgs(int userId, UsageType usageType, string timeProduct)
+        public UsageSessionChangeEventArgs(int userId, UsageType usageType, string? timeProduct)
         {
             UserId = userId;
             CurrentTimeProduct = timeProduct;
@@ -32,7 +32,10 @@ namespace Gizmo.Client
         /// <summary>
         /// Gets current time product name.
         /// </summary>
-        public string CurrentTimeProduct
+        /// <remarks>
+        /// Current time product will only have value in case of time offer when product name is known.
+        /// </remarks>
+        public string? CurrentTimeProduct
         {
             get;
             init;
