@@ -1,5 +1,4 @@
-﻿using Gizmo.Client.Options;
-using Gizmo.Web.Api.Messaging;
+﻿using Gizmo.Web.Api.Messaging;
 using Gizmo.Web.Api.Models;
 
 namespace Gizmo.Client
@@ -726,20 +725,6 @@ namespace Gizmo.Client
         public Task<UserHostGroupModel?> UserHostGroupGetAsync(int id, CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Returns the next host reservation.
-        /// </summary>
-        /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns></returns>
-        public Task<NextHostReservationModel?> NextHostReservationGetAsync(CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Returns the reservation configuration.
-        /// </summary>
-        /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns></returns>
-        public Task<ClientReservationOptions> ReservationConfigurationGetAsync(CancellationToken cancellationToken = default);
-
-        /// <summary>
         /// Attempts to enter full screen mode.
         /// </summary>
         /// <param name="enterOptions">Options.</param>
@@ -872,6 +857,13 @@ namespace Gizmo.Client
         /// <returns>Update result.</returns>
         public Task<UpdateResult> AssistanceRequestPendingCancelAsync(CancellationToken cancellationToken = default);
 
+        /// <summary>
+        /// Initiates client user login process.
+        /// </summary>
+        /// <param name="loginModel">Login model.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Client login result.</returns>
+        /// <exception cref="NotImplementedException"></exception>
         public virtual Task<ClientUserLoginResultModel> LoginAsync(ClientUserLoginModel loginModel, CancellationToken cancellationToken = default) => throw new NotImplementedException();
     }
 }
