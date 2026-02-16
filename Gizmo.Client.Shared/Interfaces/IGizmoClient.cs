@@ -871,5 +871,7 @@ namespace Gizmo.Client
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Update result.</returns>
         public Task<UpdateResult> AssistanceRequestPendingCancelAsync(CancellationToken cancellationToken = default);
+
+        public Task<ClientUserLoginResultModel> LoginAsync(ClientUserLoginModel loginModel, CancellationToken cancellationToken = default) => throw new NotImplementedException();
     }
 }
