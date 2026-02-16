@@ -484,7 +484,7 @@ namespace Gizmo.Client
         /// Gets client reservation.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<ClientReservationModel> ClientReservationGetAsync(CancellationToken cancellationToken = default);
+        public Task<ClientNextReservationModel> ClientReservationGetAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Returns all news based on supplied <paramref name="filters"/>.
