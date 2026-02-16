@@ -257,6 +257,15 @@ namespace Gizmo.Client
         public Task<LoginResult> UserLoginAsync(string username, string? password, CancellationToken cancellationToken = default);
 
         /// <summary>
+        /// Initiates client user login process.
+        /// </summary>
+        /// <param name="loginModel">Login model.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Client login result.</returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public virtual Task<ClientUserLoginResultModel> LoginAsync(ClientUserLoginModel loginModel, CancellationToken cancellationToken = default) => throw new NotImplementedException();
+
+        /// <summary>
         /// Initiates user logout.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
@@ -691,6 +700,7 @@ namespace Gizmo.Client
         /// <param name="userOrderLineModelCreate"></param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns></returns>
+        [Obsolete]
         public Task<UserProductAvailabilityCheckResult> UserProductAvailabilityCheckAsync(UserOrderLineModelCreate userOrderLineModelCreate, CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -699,6 +709,7 @@ namespace Gizmo.Client
         /// <param name="userOrderModelCreate"></param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns></returns>
+        [Obsolete]
         public Task<UserOrderCreateResultModel> UserOrderCreateAsync(UserOrderModelCreate userOrderModelCreate, CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -855,15 +866,6 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Update result.</returns>
-        public Task<UpdateResult> AssistanceRequestPendingCancelAsync(CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Initiates client user login process.
-        /// </summary>
-        /// <param name="loginModel">Login model.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns>Client login result.</returns>
-        /// <exception cref="NotImplementedException"></exception>
-        public virtual Task<ClientUserLoginResultModel> LoginAsync(ClientUserLoginModel loginModel, CancellationToken cancellationToken = default) => throw new NotImplementedException();
+        public Task<UpdateResult> AssistanceRequestPendingCancelAsync(CancellationToken cancellationToken = default);        
     }
 }
