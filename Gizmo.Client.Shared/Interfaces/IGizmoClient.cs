@@ -695,24 +695,6 @@ namespace Gizmo.Client
         public Task<PagedList<UserOrderModel>> UserOrdersGetAsync(UserOrdersFilter filters, CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Checks user's order line availability.
-        /// </summary>
-        /// <param name="userOrderLineModelCreate"></param>
-        /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns></returns>
-        [Obsolete]
-        public Task<UserProductAvailabilityCheckResult> UserProductAvailabilityCheckAsync(UserOrderLineModelCreate userOrderLineModelCreate, CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Creates an user order.
-        /// </summary>
-        /// <param name="userOrderModelCreate"></param>
-        /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns></returns>
-        [Obsolete]
-        public Task<UserOrderCreateResultModel> UserOrderCreateAsync(UserOrderModelCreate userOrderModelCreate, CancellationToken cancellationToken = default);
-
-        /// <summary>
         /// Returns true if client registration is enabled, otherwise returns false.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
