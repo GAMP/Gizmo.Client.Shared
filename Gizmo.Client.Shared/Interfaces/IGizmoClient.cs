@@ -872,6 +872,6 @@ namespace Gizmo.Client
         /// <returns>Update result.</returns>
         public Task<UpdateResult> AssistanceRequestPendingCancelAsync(CancellationToken cancellationToken = default);
 
-        public Task<ClientUserLoginResultModel> LoginAsync(ClientUserLoginModel loginModel, CancellationToken cancellationToken = default) => throw new NotImplementedException();
+        public virtual Task<ClientUserLoginResultModel> LoginAsync(ClientUserLoginModel loginModel, CancellationToken cancellationToken = default) => throw new NotImplementedException();
     }
 }
