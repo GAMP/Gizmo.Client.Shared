@@ -253,17 +253,17 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="username">Username.</param>
         /// <param name="password">Optional password.</param>
+        /// <param name="pin">Optional pin.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        public Task<LoginResult> UserLoginAsync(string username, string? password, CancellationToken cancellationToken = default);
+        public Task<LoginResult> UserLoginAsync(string username, string? password, string? pin, CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Initiates client user login process.
+        /// Initiates user login.
         /// </summary>
-        /// <param name="loginModel">Login model.</param>
+        /// <param name="username">Username.</param>
+        /// <param name="password">Optional password.</param>
         /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns>Client login result.</returns>
-        /// <exception cref="NotImplementedException"></exception>
-        public virtual Task<ClientUserLoginResultModel> LoginAsync(ClientUserLoginModel loginModel, CancellationToken cancellationToken = default) => throw new NotImplementedException();
+        public virtual Task<LoginResult> UserLoginAsync(string username, string? password, CancellationToken cancellationToken = default) => UserLoginAsync(username, password, null, cancellationToken);
 
         /// <summary>
         /// Initiates user logout.
@@ -848,6 +848,6 @@ namespace Gizmo.Client
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Update result.</returns>
-        public Task<UpdateResult> AssistanceRequestPendingCancelAsync(CancellationToken cancellationToken = default);        
+        public Task<UpdateResult> AssistanceRequestPendingCancelAsync(CancellationToken cancellationToken = default);
     }
 }
