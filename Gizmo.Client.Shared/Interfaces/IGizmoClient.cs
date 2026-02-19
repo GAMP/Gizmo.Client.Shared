@@ -849,5 +849,26 @@ namespace Gizmo.Client
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>Update result.</returns>
         public Task<UpdateResult> AssistanceRequestPendingCancelAsync(CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Attempts to get current reservation confirmation status for current user and host.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Result.</returns>
+        /// <remarks>
+        /// Access denied exception is thrown if no user is logged in.
+        /// </remarks>
+        public Task<ReservationCurrentConfirmedResult> ReservationCurrentConfirmedAsync(CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Attempts to confirm current reservation for current user and host.
+        /// </summary>
+        /// <param name="pin">Reservation pin.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Result.</returns>
+        /// <remarks>
+        /// Access denied exception is thrown if no user is logged in.
+        /// </remarks>
+        public Task<ReservationCurrentConfirmResult> ReservationCurrentConfirmAsync(string pin, CancellationToken cancellationToken = default);
     }
 }
