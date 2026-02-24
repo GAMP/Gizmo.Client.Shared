@@ -870,5 +870,17 @@ namespace Gizmo.Client
         /// Access denied exception is thrown if no user is logged in.
         /// </remarks>
         public Task<ReservationCurrentConfirmResult> ReservationCurrentConfirmAsync(string pin, CancellationToken cancellationToken = default);
+
+
+        /// <summary>
+        /// Attempts to execute payment for current reservation for current user and host.
+        /// </summary>
+        /// <param name="model">Payments model.</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Result.</returns>
+        /// <remarks>
+        /// Access denied exception is thrown if no user is logged in.
+        /// </remarks>
+        Task<ClientReservationPaymentsCreateResultModel> ReservationCurrentPaymentsAsync(ClientReservationPaymentsCreateModel model, CancellationToken cancellationToken = default);
     }
 }
