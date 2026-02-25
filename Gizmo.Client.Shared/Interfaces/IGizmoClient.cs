@@ -882,5 +882,16 @@ namespace Gizmo.Client
         /// Access denied exception is thrown if no user is logged in.
         /// </remarks>
         Task<ClientReservationPaymentsCreateResultModel> ReservationCurrentPaymentsAsync(ClientReservationPaymentsCreateModel model, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Generates url QR Code.
+        /// </summary>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>Generated url qr code. <see cref="UrlQRCodeResult.QRCode"/> string will be empty in case of an error.</returns>
+        /// <remarks>
+        /// The qr code is represented with SVG format.
+        /// </remarks>
+        public Task<UrlQRCodeResult> GenerateQRCodeFromUrlAsync(string url, CancellationToken cancellationToken = default);
+
     }
 }
