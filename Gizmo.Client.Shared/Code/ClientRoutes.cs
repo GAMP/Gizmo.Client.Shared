@@ -9,6 +9,8 @@
         public const string PasswordRecoverySetNewPasswordRoute = "/passwordrecoverysetnewpassword";
 
         public const string RegistrationIndexRoute = "/registrationindex";
+        public const string RegistrationProvidersRoute = "/registrationproviders";
+        public const string RegistrationErrorRoute = "/registrationerror";
         public const string RegistrationConfirmationMethodRoute = "/registrationconfirmationmethod";
         public const string RegistrationConfirmationRoute = "/registrationconfirmation";
         public const string RegistrationBasicFieldsRoute = "/registrationbasicfields";
