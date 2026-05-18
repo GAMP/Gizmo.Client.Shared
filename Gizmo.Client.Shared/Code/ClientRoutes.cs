@@ -15,6 +15,9 @@
         public const string RegistrationConfirmationRoute = "/registrationconfirmation";
         public const string RegistrationBasicFieldsRoute = "/registrationbasicfields";
         public const string RegistrationAdditionalFieldsRoute = "/registrationadditionalfields";
+        public const string RegistrationEmailRoute = "/registrationemail";
+        public const string RegistrationPhoneRoute = "/registrationphone";
+        public const string RegistrationPasswordRoute = "/registrationpassword";
 
         public const string HomeRoute = "/home";
         public const string ApplicationsRoute = "/apps";
