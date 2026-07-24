@@ -5,6 +5,7 @@
         public const string LoginRoute = "/";
 
         public const string PasswordRecoveryRoute = "/passwordrecovery";
+        public const string PasswordRecoveryDestinationRoute = "/passwordrecoverydestination";
         public const string PasswordRecoveryConfirmationRoute = "/passwordrecoveryconfirmation";
         public const string PasswordRecoverySetNewPasswordRoute = "/passwordrecoverysetnewpassword";
 
