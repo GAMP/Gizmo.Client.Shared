@@ -4,16 +4,23 @@
     {
         public const string LoginRoute = "/";
 
+        public const string PasswordRecoveryKindRoute = "/passwordrecoverykind";
         public const string PasswordRecoveryRoute = "/passwordrecovery";
+        public const string PasswordRecoveryDestinationRoute = "/passwordrecoverydestination";
         public const string PasswordRecoveryConfirmationRoute = "/passwordrecoveryconfirmation";
         public const string PasswordRecoverySetNewPasswordRoute = "/passwordrecoverysetnewpassword";
 
         public const string RegistrationIndexRoute = "/registrationindex";
+        public const string RegistrationProvidersRoute = "/registrationproviders";
+        public const string RegistrationErrorRoute = "/registrationerror";
         public const string RegistrationConfirmationMethodRoute = "/registrationconfirmationmethod";
         public const string RegistrationConfirmationRoute = "/registrationconfirmation";
         public const string RegistrationBasicFieldsRoute = "/registrationbasicfields";
         public const string RegistrationAdditionalFieldsRoute = "/registrationadditionalfields";
-
+        public const string RegistrationEmailRoute = "/registrationemail";
+        public const string RegistrationPhoneRoute = "/registrationphone";
+        public const string RegistrationRedirectRoute = "/registrationredirect";
+        
         public const string HomeRoute = "/home";
         public const string ApplicationsRoute = "/apps";
         public const string ApplicationDetailsRoute = "/appdetails";
