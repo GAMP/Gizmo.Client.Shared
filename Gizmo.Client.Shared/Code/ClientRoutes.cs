@@ -31,6 +31,9 @@
         public const string UserDepositsRoute = "/profile/deposits";
         public const string UserProductsRoute = "/profile/products";
         public const string UserPurchasesRoute = "/profile/purchases";
+        public const string UserLadderRoute = "/profile/ladder";
+        public const string UserAchievementsRoute = "/profile/achievements";
+        public const string UserChallengesRoute = "/profile/challenges";
         public const string UserSettingsRoute = "/settings";
 
         public const string NotFoundRoute = "/notfound";
